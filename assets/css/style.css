@@ -56,16 +56,23 @@ nav {
   top: 0;
   width: 100%;
 }
+.navbar {
+  position: sticky;
+}
+.navbar.scrolled {
+  background-color: var(--neutral_Gray);
+}
 
 .logo {
   font-size: 1.2em;
   font-weight: bold;
   margin-left: 7rem;
   margin-top: -0.5rem;
+  font-family: "Bagoss Standard TRIAL", sans-serif;
 }
 
 .logo span {
-  color: var(--darkblue);
+  color: var(--lumine_Blue);
 }
 
 .nav-links {
@@ -93,7 +100,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: var(--darkblue);
+  color: var(--lumine_Blue);
   transform: translateY(-2px);
 }
 
@@ -112,7 +119,7 @@ nav {
 }
 
 .btn-contact:hover {
-  background-color: var(--lightblue);
+  background-color: var(--accent_Sky);
   transform: translateY(-2px);
 }
 
@@ -155,7 +162,7 @@ nav {
 .parallelogram {
   width: 50%;
   height: 79px;
-  background-color: var(--darkblue);
+  background-color: var(--lumine_Blue);
   transform: skew(-20deg);
   margin: 5rem auto;
   display: flex;
@@ -170,7 +177,7 @@ nav {
   margin: 0;
   padding: 0 0.8rem 0 0.6rem;
   font-size: 3.4rem;
-  font-weight: 647;
+  font-weight: 700;
 }
 .hero-content h2 {
   text-align: center;
@@ -186,7 +193,7 @@ nav {
 }
 
 .hero-btn {
-  padding: 0.7rem 1.5rem 0.94rem 1.5rem;
+  padding: 0.94rem 1.5rem 0.94rem 1.5rem;
   background-color: var(--btn-bg);
   color: var(--btn-text);
   border: none;
@@ -207,15 +214,31 @@ nav {
   font-style: solid;
 }
 
+/** Styling the balance sheet image **/
+.bck-img {
+  position: absolute;
+  top: 42%;
+  left: 10%;
+
+  /*  opacity: 0.1;*/
+  z-index: -1;
+}
+.bck-img img {
+  width: 90%;
+  height: auto;
+  border: none;
+  /*opacity: 0.1;*/
+}
+
 /* Responsive for the mobile view*/
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .nav-links {
     position: fixed;
     top: -100%;
     left: 0;
     width: 100%;
-    background-color: var(--darkblue);
+    background-color: var(--lumine_Blue);
     flex-direction: column;
     align-items: center;
     padding: 4rem 0;
@@ -226,7 +249,7 @@ nav {
   }
 
   body.nav-scrolled .nav-links {
-    background-color: var(--gray);
+    background-color: var(--neutral_Gray);
   }
 
   .nav-links.active {
@@ -253,6 +276,7 @@ nav {
 
   .hamburger {
     display: flex;
+    margin-right: 4rem;
   }
 
   .hamburger.active .bar:nth-child(1) {
@@ -285,20 +309,24 @@ nav {
     border: solid;
     border-width: 1.5px;
   }
+  .logo {
+    margin-left: 3rem;
+  }
 
   /*the hero section*/
   .hero {
     padding-top: 6rem;
   }
   .parallelogram {
-    width: 70%;
+    width: 52%;
+    margin-top: 4%;
     height: 80px;
   }
   .parallelogram h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .hero-content h2 {
-    font-size: 2.6rem;
+    font-size: 3rem;
     margin-top: -4rem;
   }
   .hero-content p {
@@ -317,6 +345,38 @@ nav {
     margin: 2.8rem auto 0 auto;
     width: fit-content;
   }
+
+  .bck-img {
+    top: 77%;
+    left: -10%;
+
+    /*  opacity: 0.1;*/
+    z-index: -1;
+  }
+  .bck-img img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .parallelogram {
+    width: 60%;
+    margin-top: 4%;
+    height: 80px;
+  }
+  .parallelogram h1 {
+    font-size: 4rem;
+  }
+  .hero-content h2 {
+    font-size: 3rem;
+    margin-top: -4rem;
+  }
+  .hero-content p {
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0.9rem;
+  }
 }
 
 /*For smaller screens*/
@@ -329,8 +389,18 @@ nav {
     color: var(--wht-text);
   }
 
+  .hamburger {
+    margin-right: -2rem;
+  }
+
   .logo {
     margin-left: 0rem;
+    margin-top: 2px;
+  }
+
+  /* hero section */
+  .hero {
+    margin-left: 12%;
   }
 
   .hero-btn {
@@ -339,9 +409,8 @@ nav {
     width: fit-content;
   }
 
-  /* Additional mobile optimizations */
   .parallelogram {
-    width: 85%;
+    width: 67%;
   }
 
   .parallelogram h1 {
@@ -357,6 +426,16 @@ nav {
     margin-left: 1rem;
     margin-right: 1rem;
   }
+  .bck-img {
+    top: 67.8%;
+    left: -5%;
+
+    /*  opacity: 0.1;*/
+    z-index: -1;
+  }
+  .bck-img img {
+    width: 110%;
+  }
 }
 
 /* For larger screens */
@@ -367,5 +446,40 @@ nav {
 
   .nav-links {
     margin-left: 2rem;
+  }
+}
+
+/** For other screens**/
+@media (max-width: 770px) {
+  .hamburger {
+    margin-right: -10px;
+  }
+
+  .hero {
+    margin-left: 10%;
+  }
+
+  .bck-img {
+    top: 65%;
+    left: -5%;
+
+    /*  opacity: 0.1;*/
+    z-index: -1;
+  }
+  .bck-img img {
+    width: 110%;
+  }
+}
+
+@media (max-width: 400px) {
+  .bck-img {
+    top: 92%;
+    left: -5%;
+
+    /*  opacity: 0.1;*/
+    z-index: -1;
+  }
+  .bck-img img {
+    width: 110%;
   }
 }
