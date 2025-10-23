@@ -25,6 +25,13 @@
   --wht-text: var(--white);
 }
 
+body {
+  font-family: "Bagoss Standard TRIAL", sans-serif;
+  font-weight: 400;
+  color: #0b0b0b;
+  line-height: 1.5;
+}
+
 /************** The Navigation *************/
 nav {
   display: flex;
@@ -187,6 +194,20 @@ nav {
 .hero-content p a {
   text-decoration: none;
   font-style: solid;
+}
+
+/** Styling the balance sheet image **/
+.bck-img {
+  position: absolute;
+  top: 150px;
+
+  /*  opacity: 0.1;*/
+  z-index: -1;
+}
+.bck-img img {
+  width: 400px;
+  height: auto;
+  /*opacity: 0.1;*/
 }
 
 /* Responsive for the mobile view*/
