@@ -2,25 +2,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Bagoss Standard TRIAL", sans-serif;
 }
 
 /*Variables that will be mainly used*/
 :root {
-  --black: #111111;
+  --Deep_Navy: #0b0b0b;
   --white: #ffffff;
-  --darkblue: #0145b2;
-  --lightblue: #3b62ff;
+  --lumine_Blue: #204ecf;
+  --accent_Sky: #dde6ff;
   --charcoal: #1a1a1a;
-  --gray: #e0e0e0;
-  --main-text: var(--black);
-  --nav-bg: var(--white); /* Changed from darkblue to white to match your nav */
-  --nav-text: var(--black);
+  --neutral_Gray: #6b6b6b;
+  --success_Green: #14c484;
+  --main-text: var(--Deep_Navy);
+  --nav-bg: var(--white); /* Default nav background color */
+  --nav-text: var(--Deep_Navy);
   --btn-text: var(--white);
-  --btn-bg: var(--darkblue);
+  --btn-bg: var(--lumine_Blue);
   --nav-border: transparent;
-  --blk-text: var(--black);
+  --blk-text: var(--Deep_Navy);
+  --snd-blk-text: var(--neutral_Gray);
   --wht-text: var(--white);
 }
 
@@ -46,7 +47,7 @@ nav {
 }
 
 .logo span {
-  color: var(--darkblue);
+  color: var(--lumine_Blue);
 }
 
 .nav-links {
@@ -74,7 +75,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: var(--darkblue);
+  color: var(--lumine_Blue);
   transform: translateY(-2px);
 }
 
@@ -93,7 +94,7 @@ nav {
 }
 
 .btn-contact:hover {
-  background-color: var(--lightblue);
+  background-color: var(--accent_Sky);
   transform: translateY(-2px);
 }
 
@@ -136,7 +137,7 @@ nav {
 .parallelogram {
   width: 50%;
   height: 79px;
-  background-color: var(--darkblue);
+  background-color: var(--lumine_Blue);
   transform: skew(-20deg);
   margin: 5rem auto;
   display: flex;
@@ -151,7 +152,7 @@ nav {
   margin: 0;
   padding: 0 0.8rem 0 0.6rem;
   font-size: 3.4rem;
-  font-weight: 647;
+  font-weight: 700;
 }
 .hero-content h2 {
   text-align: center;
@@ -196,7 +197,7 @@ nav {
     top: -100%;
     left: 0;
     width: 100%;
-    background-color: var(--darkblue);
+    background-color: var(--lumine_Blue);
     flex-direction: column;
     align-items: center;
     padding: 4rem 0;
@@ -207,7 +208,7 @@ nav {
   }
 
   body.nav-scrolled .nav-links {
-    background-color: var(--gray);
+    background-color: var(--neutral_Gray);
   }
 
   .nav-links.active {
