@@ -25,3 +25,17 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
     body.style.overflow = "";
   });
 });
+
+
+// Scroll behavior for navigation
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    body.classList.add("nav-scrolled");
+  } else {
+    body.classList.remove("nav-scrolled");
+  }
+});
+
+// Initialize scroll state
+window.dispatchEvent(new Event("scroll"));
+
