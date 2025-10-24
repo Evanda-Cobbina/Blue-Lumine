@@ -160,9 +160,9 @@ nav {
   align-items: center;
 }
 .parallelogram {
-  width: 50%;
+  width: 53%;
   height: 79px;
-  background-color: var(--lumine_Blue);
+  background-color: var(--darkblue);
   transform: skew(-20deg);
   margin: 5rem auto;
   display: flex;
