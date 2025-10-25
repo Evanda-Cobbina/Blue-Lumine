@@ -1,5 +1,155 @@
-@media (min-width: 850px) {
+@media (min-width: 810px) and (max-width: 1024px) {
   .logo {
     font-size: 1rem;
+    margin-left: -1.2rem;
+  }
+
+  .nav-links {
+    gap: 2rem;
+    margin-right: -6%;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 0.5rem 0.1rem;
+  }
+  /*This is to give the individual links better spacing. It solved a problem I had*/
+  .act-links {
+    margin-top: 0.5rem;
+    margin-right: 4rem;
+  }
+}
+
+@media (max-width: 830px) {
+  .act-links {
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 809px) {
+  .logo {
+    font-size: 1.2rem;
+    margin-left: 4rem;
+  }
+
+  /*This is to give the individual links better spacing. It solved a problem I had*/
+  .act-links {
+    margin-top: 0.5rem;
+    margin-right: 3rem;
+  }
+}
+
+/* For larger screens */
+@media (min-width: 769px) {
+  nav {
+    padding: 1.2rem 4rem;
+  }
+
+  .nav-links {
+    margin-left: 2rem;
+  }
+}
+
+/** For other screens**/
+@media (max-width: 770px) {
+  .hamburger {
+    margin-right: -10px;
+  }
+
+  .hero {
+    margin-left: 10%;
+  }
+
+  .bck-img {
+    top: 65%;
+    left: -5%;
+
+    /*  opacity: 0.1;*/
+    z-index: -1;
+  }
+  .bck-img img {
+    width: 110%;
+  }
+}
+
+/*For smaller screens*/
+@media (max-width: 480px) {
+  .nav-links a {
+    color: var(--wht-text) !important;
+  }
+
+  .act-links {
+    color: var(--wht-text);
+  }
+
+  .hamburger {
+    margin-right: -2rem;
+  }
+
+  .logo {
+    margin-left: 0rem;
+    margin-top: 2px;
+  }
+
+  /* hero section */
+  .hero {
+    margin-left: 12%;
+  }
+
+  .hero-btn {
+    transform: none;
+    margin: 2.8rem auto 0 auto;
+    width: fit-content;
+  }
+
+  .parallelogram {
+    width: 67%;
+  }
+
+  .parallelogram h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .bck-img {
+    top: 67.8%;
+    left: -5%;
+
+    /*  opacity: 0.1;*/
+    z-index: -1;
+  }
+  .bck-img img {
+    width: 110%;
+  }
+}
+
+@media (max-width: 400px) {
+  .bck-img {
+    top: 92%;
+    left: -5%;
+
+    /*  opacity: 0.1;*/
+    z-index: -1;
+  }
+  .bck-img img {
+    width: 110%;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 399px) {
+  .logo {
+    font-size: 0.89rem;
+  }
+  .hamburger {
+    width: 9%;
   }
 }

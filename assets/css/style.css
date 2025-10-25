@@ -1,38 +1,39 @@
 @font-face {
-  font-family: 'Bagoss Standard TRIAL';
-  src: url('../fonts/BagossStandardTRIAL-Regular.woff2') format('woff2'),
-       url('../fonts/BagossStandardTRIAL-Regular.woff') format('woff');
+  font-family: "Bagoss Standard TRIAL";
+  src: url("../fonts/BagossStandardTRIAL-Regular.woff2") format("woff2"),
+    url("../fonts/BagossStandardTRIAL-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Bagoss Standard TRIAL';
-  src: url('../fonts/BagossStandardTRIAL-Bold.woff2') format('woff2'),
-       url('../fonts/BagossStandardTRIAL-Bold.woff') format('woff');
+  font-family: "Bagoss Standard TRIAL";
+  src: url("../fonts/BagossStandardTRIAL-Bold.woff2") format("woff2"),
+    url("../fonts/BagossStandardTRIAL-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Bagoss Standard TRIAL', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Bagoss Standard TRIAL", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 /*Variables that will be mainly used*/
 :root {
   --black: #111111;
   --white: #ffffff;
-  --darkblue: #0145b2;
-  --lightblue: #3b62ff;
-  --charcoal: #1a1a1a;
-  --gray: #e0e0e0;
+  --darkblue: #204ecf;
+  --lightblue: #dde6ff;
+  --charcoal: #0b0b0b;
+  --gray: #6b6b6b;
+  --success_green: #14c484;
   --main-text: var(--black);
   --nav-bg: var(--white); /* Changed from darkblue to white to match your nav */
   --nav-text: var(--black);
@@ -72,7 +73,7 @@ nav {
 }
 
 .logo span {
-  color: var(--lumine_Blue);
+  color: var(--darkblue);
 }
 
 .nav-links {
@@ -100,7 +101,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: var(--lumine_Blue);
+  color: var(--darkblue);
   transform: translateY(-2px);
 }
 
@@ -238,7 +239,7 @@ nav {
     top: -100%;
     left: 0;
     width: 100%;
-    background-color: var(--lumine_Blue);
+    background-color: var(--darkblue);
     flex-direction: column;
     align-items: center;
     padding: 4rem 0;
@@ -376,110 +377,5 @@ nav {
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 0.9rem;
-  }
-}
-
-/*For smaller screens*/
-@media (max-width: 480px) {
-  .nav-links a {
-    color: var(--wht-text) !important;
-  }
-
-  .act-links {
-    color: var(--wht-text);
-  }
-
-  .hamburger {
-    margin-right: -2rem;
-  }
-
-  .logo {
-    margin-left: 0rem;
-    margin-top: 2px;
-  }
-
-  /* hero section */
-  .hero {
-    margin-left: 12%;
-  }
-
-  .hero-btn {
-    transform: none;
-    margin: 2.8rem auto 0 auto;
-    width: fit-content;
-  }
-
-  .parallelogram {
-    width: 67%;
-  }
-
-  .parallelogram h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-content h2 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 1.2rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-  .bck-img {
-    top: 67.8%;
-    left: -5%;
-
-    /*  opacity: 0.1;*/
-    z-index: -1;
-  }
-  .bck-img img {
-    width: 110%;
-  }
-}
-
-/* For larger screens */
-@media (min-width: 769px) {
-  nav {
-    padding: 1.2rem 4rem;
-  }
-
-  .nav-links {
-    margin-left: 2rem;
-  }
-}
-
-/** For other screens**/
-@media (max-width: 770px) {
-  .hamburger {
-    margin-right: -10px;
-  }
-
-  .hero {
-    margin-left: 10%;
-  }
-
-  .bck-img {
-    top: 65%;
-    left: -5%;
-
-    /*  opacity: 0.1;*/
-    z-index: -1;
-  }
-  .bck-img img {
-    width: 110%;
-  }
-}
-
-@media (max-width: 400px) {
-  .bck-img {
-    top: 92%;
-    left: -5%;
-
-    /*  opacity: 0.1;*/
-    z-index: -1;
-  }
-  .bck-img img {
-    width: 110%;
   }
 }
