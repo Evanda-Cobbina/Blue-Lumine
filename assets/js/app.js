@@ -26,9 +26,22 @@ document.querySelectorAll(".nav-links a").forEach((link) => {
   });
 });
 
+// Add scrolled class to navbar on scroll
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+// Initialize scroll state
+window.dispatchEvent(new Event("scroll"));
+
 
 // Scroll behavior for navigation
-window.addEventListener("scroll", () => {
+/* window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
     body.classList.add("nav-scrolled");
   } else {
@@ -38,4 +51,7 @@ window.addEventListener("scroll", () => {
 
 // Initialize scroll state
 window.dispatchEvent(new Event("scroll"));
+*/
+
+
 

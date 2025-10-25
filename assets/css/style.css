@@ -44,6 +44,9 @@
   --wht-text: var(--white);
 }
 
+body {
+  font-family: "Bagoss Standard TRIAL", sans-serif;
+}
 /************** The Navigation *************/
 nav {
   display: flex;
@@ -61,7 +64,7 @@ nav {
   position: sticky;
 }
 .navbar.scrolled {
-  background-color: var(--neutral_Gray);
+  background-color: var(--gray);
 }
 
 .logo {
@@ -73,6 +76,9 @@ nav {
 }
 
 .logo span {
+  color: var(--darkblue);
+}
+span {
   color: var(--darkblue);
 }
 
@@ -194,7 +200,7 @@ nav {
 }
 
 .hero-btn {
-  padding: 0.94rem 1.5rem 0.94rem 1.5rem;
+  padding: 0.92rem 1.5rem 0.94rem 1.5rem;
   background-color: var(--btn-bg);
   color: var(--btn-text);
   border: none;
@@ -229,6 +235,56 @@ nav {
   height: auto;
   border: none;
   /*opacity: 0.1;*/
+}
+
+/** The Second Section **/
+.second {
+  margin-top: 33rem;
+  padding: 4rem 2rem;
+}
+.second-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.second-content h2 {
+  font-size: 2.7rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.second-content p {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  line-height: 1.6;
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: -6.5rem;
+  margin-right: 8rem;
+}
+.cards-container .card {
+  width: 27%;
+  text-align: center;
+}
+.cards-container .card img {
+  width: auto;
+  height: 60vh;
+}
+.cards-container .card h3 {
+  font-size: 1.2rem;
+  margin-top: -7.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-left: 7.5rem;
 }
 
 /* Responsive for the mobile view*/
