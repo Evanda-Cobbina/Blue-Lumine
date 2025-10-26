@@ -237,7 +237,7 @@ span {
   /*opacity: 0.1;*/
 }
 
-/** The Second Section **/
+/***************** The Second Section ***************/
 .second {
   margin-top: 33rem;
   padding: 4rem 2rem;
@@ -413,6 +413,49 @@ span {
   }
   .bck-img img {
     width: 100%;
+  }
+
+  /************ The second section**************/
+  .second {
+    margin-top: 20rem;
+    padding: 4rem 2rem;
+    margin-left: 0.5rem;
+  }
+  .second-content {
+    flex-direction: column;
+    padding: 4rem 0rem;
+    margin-left: 1.5rem;
+  }
+  .second-content h2 {
+    font-size: 2.3rem;
+  }
+  .second-content p {
+    font-size: 1.1rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 0.02rem;
+    transform: translateX(-70px);
+  }
+
+  .cards-container .card {
+    width: 100%;
+    text-align: center;
+  }
+  .cards-container .card img {
+    width: auto;
+    height: 70vh;
+  }
+  .cards-container .card h3 {
+    font-size: 1.12rem;
+    margin-top: -7.9rem;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 8.5rem;
+    width: 110%;
   }
 }
 

@@ -88,8 +88,9 @@
   }
 
   .logo {
-    margin-left: 0rem;
+    margin-left: 1rem;
     margin-top: 2px;
+    font-size: 1.2rem;
   }
 
   /* hero section */
@@ -130,6 +131,50 @@
   .bck-img img {
     width: 110%;
   }
+
+  /************ The second section**************/
+  .second {
+    margin-top: 20rem;
+    padding: 4rem 1rem;
+    margin-left: 0rem;
+    overflow: hidden;
+  }
+  .second-content {
+    flex-direction: column;
+    padding: 4rem 0rem;
+    margin-left: 1.5rem;
+  }
+  .second-content h2 {
+    font-size: 2.3rem;
+  }
+  .second-content p {
+    font-size: 1.1rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 0.02rem;
+    transform: translateX(-70px);
+  }
+
+  .cards-container .card {
+    width: 90%;
+    text-align: center;
+  }
+  .cards-container .card img {
+    width: auto;
+    height: 60vh;
+  }
+  .cards-container .card h3 {
+    font-size: 1.12rem;
+    margin-top: -7.9rem;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 8.8rem;
+    width: 110%;
+  }
 }
 
 @media (max-width: 400px) {
@@ -151,5 +196,46 @@
   }
   .hamburger {
     width: 9%;
+  }
+  .cards-container {
+    transform: translateX(-60px);
+  }
+  .cards-container .card h3 {
+    margin-left: 8rem;
+    margin-top: -7.5rem;
+  }
+  .cards-container .card img {
+    height: 70vh;
+  }
+}
+@media (min-width: 380px) and (max-width: 399px) {
+  .second-content {
+    flex-direction: column;
+    padding: 4rem 0rem;
+    margin-left: 1.5rem;
+  }
+  .second-content h2 {
+    font-size: 2.3rem;
+  }
+  .second-content p {
+    font-size: 1.1rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .cards-container .card {
+    width: 90%;
+    text-align: center;
+  }
+  .cards-container .card img {
+    width: auto;
+    height: 60vh;
+  }
+  .cards-container {
+    transform: translateX(-70px);
+  }
+  .cards-container .card h3 {
+    margin-left: 8.5rem;
+    margin-top: -7.9rem;
   }
 }
