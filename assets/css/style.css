@@ -414,6 +414,118 @@ ol {
   object-fit: contain;
 }
 
+/*********** The Fourth Section *************/
+.fourth {
+  position: relative;
+  margin-top: 20rem;
+}
+.custom-shape-divider-bottom-1762215758 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+
+.custom-shape-divider-bottom-1762215758 svg {
+  position: relative;
+  display: block;
+  width: calc(113% + 1.3px);
+  height: 290px;
+}
+
+.custom-shape-divider-bottom-1762215758 .shape-fill {
+  fill: #204ecf;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, var(--white), var(--lightblue));
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.testimonial-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--lightblue);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--lightblue);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.testimonial-content {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.testimonial-content::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  font-size: 4rem;
+  color: var(--lightblue);
+  font-family: serif;
+  line-height: 1;
+  z-index: 0;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 2px solid var(--lightblue);
+}
+
+.author-info h4 {
+  color: var(--darkblue);
+  margin-bottom: 0.3rem;
+}
+
+.stars {
+  color: var(--darkblue);
+  margin-bottom: 0.5rem;
+}
+
 /************* Media Queries **************/
 
 @media (max-width: 800px) {
