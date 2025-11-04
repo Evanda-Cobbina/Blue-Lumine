@@ -41,6 +41,29 @@
     margin-left: 16rem;
     margin-top: -11rem;
   }
+
+  /***** The third section *****/
+  .third {
+    margin: 5rem 7rem 5rem 7rem;
+    font-family: "Inter", sans-serif;
+    color: var(--main-text);
+    padding: 80px 20px;
+  }
+  .illustration {
+    flex-shrink: 0;
+    width: 30%;
+    transform: translateY(9%);
+    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .illustration img {
+    width: 210%;
+    height: auto;
+    object-fit: contain;
+  }
 }
 @media (min-width: 1020px) and (max-width: 1024px) {
   .cards-container .card h3 {
@@ -52,6 +75,17 @@
   .act-links {
     margin-top: 0.5rem;
     margin-right: 1rem;
+  }
+}
+
+@media (min-width: 840px) and (max-width: 859px) {
+  .illustration {
+    transform: translateY(0%);
+    margin-left: 13rem;
+  }
+
+  .illustration img {
+    width: 290%;
   }
 }
 
