@@ -414,11 +414,32 @@ ol {
   object-fit: contain;
 }
 
-/*********** The Fourth Section *************/
+/******************************* The Fourth Section **********************************/
 .fourth {
   position: relative;
-  margin-top: 20rem;
+  background-color: rgb(1, 1, 166);
+  z-index: -1;
 }
+.fourth-content {
+  margin-top: -6rem;
+}
+.fth-txt {
+  padding-left: 5rem;
+}
+.fth-txt h2 {
+  text-align: left;
+  font-size: 1.7rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: var(--wht-text);
+}
+.fth-txt p {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 6rem;
+  color: var(--wht-text);
+}
+/*
 .custom-shape-divider-bottom-1762215758 {
   position: absolute;
   bottom: 0;
@@ -434,12 +455,13 @@ ol {
   position: relative;
   display: block;
   width: calc(113% + 1.3px);
-  height: 290px;
+  height: 590px;
 }
 
 .custom-shape-divider-bottom-1762215758 .shape-fill {
   fill: #204ecf;
 }
+*/
 
 .section-title {
   text-align: center;
@@ -466,13 +488,15 @@ ol {
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
+  gap: 3rem;
+  margin-bottom: 7rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .testimonial-card {
   background: var(--white);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid var(--lightblue);
   transition: all 0.3s ease;
@@ -695,6 +719,8 @@ ol {
     margin-left: 8.5rem;
     width: 110%;
   }
+
+  /*The fourth section*/
 }
 
 @media (max-width: 700px) {
