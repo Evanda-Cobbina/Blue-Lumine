@@ -112,6 +112,24 @@
     margin-left: 2rem;
   }
 }
+@media (min-width: 768px) {
+  .nav-links {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end; /* aligns links to the right */
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    gap: 2rem;
+  }
+  .nav-links a {
+    text-align: center;
+    width: auto;
+    color: var(--nav-text);
+  }
+}
 
 /** For other screens**/
 @media (max-width: 770px) {
