@@ -129,6 +129,26 @@
     width: auto;
     color: var(--nav-text);
   }
+
+  /****The fourth*****/
+
+  .svg-curve {
+    margin-bottom: 6rem;
+    transform: translateY(-5%);
+    overflow: hidden;
+  }
+  .fth-txt {
+    padding-left: 3rem;
+  }
+  .fth-txt h2 {
+    text-align: left;
+    font-size: 1.7rem;
+    margin-bottom: 0.7rem;
+  }
+  .fth-txt p {
+    text-align: left;
+    margin-bottom: 5rem;
+  }
 }
 
 /** For other screens**/
@@ -257,7 +277,29 @@
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 431px) and (min-width: 429px) {
+  /*This is for a very specific screen size that vexing me*/
+
+  .fth-txt {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 413px) {
+  /*The fourth section*/
+
+  .svg-curve {
+    width: 105%;
+    overflow: hidden;
+  }
+  .fth-txt {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 399px) and (max-width: 428px) {
   .bck-img {
     top: 92%;
     left: -5%;
@@ -289,6 +331,7 @@
   }
 }
 @media (min-width: 370px) and (max-width: 399px) {
+  /*This is for a very specific screen size that vexing me*/
   .second-content {
     flex-direction: column;
     padding: 4rem 0rem;
@@ -320,6 +363,7 @@
   }
 }
 @media (min-width: 371px) and (max-width: 379px) {
+  /*This is for a very specific screen size that vexing me*/
   .cards-container {
     transform: translateX(-10%);
   }
@@ -329,6 +373,7 @@
   }
 }
 @media (min-width: 359px) and (max-width: 362px) {
+  /*This is for a very specific screen size that vexing me*/
   .cards-container {
     transform: translateX(-45%);
   }
@@ -338,6 +383,7 @@
   }
 }
 @media (min-width: 767px) and (max-width: 769px) {
+  /*This is for a very specific screen size that vexing me*/
   .cards-container {
     transform: none;
   }
@@ -347,6 +393,7 @@
   }
 }
 @media (min-width: 343px) and (max-width: 345px) {
+  /*This is for a very specific screen size that vexing me*/
   .cards-container .card {
     width: 100%;
     text-align: center;
@@ -360,6 +407,7 @@
   }
 }
 @media (min-width: 500px) and (max-width: 542px) {
+  /*This is for a very specific screen size that vexing me*/
   .cards-container {
     transform: translateX(-25px);
   }
