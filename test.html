@@ -3,229 +3,292 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Get started with Blue Lumine</title>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
-
-      body {
-        margin: 0;
-        font-family: "Inter", sans-serif;
-        color: #000;
-        background-color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 80px 20px;
-      }
-
-      .wrapper {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        max-width: 1100px;
-        width: 100%;
-        gap: 60px;
-      }
-
-      .text-section {
-        flex: 1;
-        max-width: 550px;
-      }
-
-      h1 {
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 1.25;
-        margin-bottom: 50px;
-      }
-
-      ol {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        counter-reset: step;
-      }
-
-      li {
-        position: relative;
-        counter-increment: step;
-        padding-left: 50px; /* space for number and line */
-        margin-bottom: 30px;
-      }
-
-      li::before {
-        content: counter(step);
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 32px;
-        height: 32px;
-        font-weight: 700;
-        font-size: 18px;
-        color: #000;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      li::after {
-        /* This is the vertical line beside each number */
-        content: "";
-        position: absolute;
-        left: 15px; /* aligns line with center of number */
-        top: 36px; /* starts just below number */
-        width: 2px;
-        height: calc(100% - 10px); /* fills the rest of the item */
-        background-color: #7c6161;
-      }
-
-      /* Remove the line after the last item */
-      li:last-child::after {
-        height: calc(140% - 20px);
-      }
-
-      ol {
-        counter-reset: step;
-      }
-
-      .step h3 {
-        margin: 0;
-        font-size: 18px;
-        font-weight: 700;
-        color: #000;
-      }
-
-      .step p {
-        margin: 8px 0 0;
-        font-size: 15px;
-        color: #333;
-        line-height: 1.5;
-        max-width: 480px;
-      }
-
-      .btn {
-        display: inline-block;
-        background-color: #0048ff;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 600;
-        border-radius: 32px;
-        padding: 12px 32px;
-        margin-left: 2.8rem;
-        transform: translateY(-50%);
-        text-decoration: none;
-        margin-top: 40px;
-        transition: all 0.3s ease;
-      }
-
-      .btn:hover {
-        background-color: #2563eb;
-      }
-
-      .illustration {
-        flex-shrink: 0;
-        width: 320px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .illustration img {
-        width: 100%;
-        height: auto;
-        object-fit: contain;
-      }
-
-      @media (max-width: 900px) {
-        .wrapper {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 40px;
-        }
-
-        h1 {
-          font-size: 30px;
-          margin-bottom: 40px;
-        }
-
-        .illustration {
-          width: 100%;
-          justify-content: flex-start;
-        }
-
-        .illustration img {
-          width: 260px;
-        }
-      }
-
-      @media (max-width: 600px) {
-        h1 {
-          font-size: 26px;
-        }
-
-        li::before {
-          font-size: 18px;
-        }
-
-        .step p {
-          font-size: 14px;
-        }
-
-        .btn {
-          font-size: 15px;
-          padding: 10px 26px;
-        }
-      }
-    </style>
+    <title>Blue Lumine</title>
+    <link rel="stylesheet" href="test.css" />
+    <!--    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/tablet.css" />-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
-    <div class="wrapper">
-      <div class="text-section">
-        <h1>Get started with blue lumine<br />in three easy steps</h1>
+    <!--The navigation-->
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <h2>blue<span>Lumine.</span></h2>
+        </div>
 
-        <ol>
-          <li>
-            <div class="step">
-              <h3>Book a call</h3>
-              <p>
-                Schedule a session with our revenue specialists. We’ll walk you
-                through how Blue Lumine can streamline your data and collection
-                systems for maximum efficiency.
-              </p>
-            </div>
-          </li>
+        <div class="nav-links">
+          <a href="#" class="act-links">Solutions</a>
+          <a href="#" class="act-links">Pricing</a>
+          <a href="#" class="act-links">About</a>
 
-          <li>
-            <div class="step">
-              <h3>Connect your sources</h3>
-              <p>
-                Easily integrate your existing payment channels, analytics
-                tools, and business data—all in one seamless platform.
-              </p>
-            </div>
-          </li>
+          <!--the cta-->
+          <a href="#"><button class="btn-contact">Contact Sales</button></a>
+        </div>
 
-          <li>
-            <div class="step">
-              <h3>Smart Onboarding</h3>
-              <p>
-                Our team guides you through setup, helping you automate revenue
-                tracking, uncover insights, and start optimizing collections
-                right away.
-              </p>
-            </div>
-          </li>
-        </ol>
+        <!-- The burger -->
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
 
-        <a href="#" class="btn">Get started</a>
+    <!----- The Hero Section ----->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="parallelogram">
+          <h1>Monetization</h1>
+        </div>
+
+        <h2>for data-driven businesses</h2>
+        <p>
+          BlueLumine simplifies how businesses collect revenue and uncover
+          insights-<br />
+          turning data into smarter, faster desicions..
+          <br />
+          <a href="#"><button class="hero-btn">Get started</button></a>
+        </p>
       </div>
 
-      <div class="illustration">
+      <div class="bck-img">
         <img
-          src="https://cdn-icons-png.flaticon.com/512/4149/4149670.png"
-          alt="Data chart illustration"
+          src="images/icons/total_balance_icon.png"
+          alt="Image of a balace sheet."
         />
       </div>
-    </div>
+    </section>
+
+    <section class="second">
+      <div class="second-content">
+        <h2>
+          Unlock
+          <span>Smarter Revenue&trade;<br /></span>with the Blue Lumine
+          Intelligence Hub
+        </h2>
+        <p>
+          Stay ahead of every transaction with real-time insights and precision.
+          The Blue Lumine intelligence Hub centralizes your revenue data,
+          offering actionable analytics, automated tracking, and performance
+          alerts-all designed to help you collect smarter, grow faster, and make
+          informed decisions in one unified platform.
+        </p>
+      </div>
+
+      <div class="cards-container">
+        <div class="card">
+          <img src="images/icons/effecient_tax_collection.png" alt="Icon 1" />
+          <h3>Effecient tax collection</h3>
+        </div>
+
+        <div class="card">
+          <img src="images/icons/compliance_monitoring.png" alt="Icon 2" />
+          <h3>Compliance monitoring</h3>
+        </div>
+
+        <div class="card">
+          <img src="images/icons/streamline_billing.png" alt="Icon 3" />
+          <h3>Streamline billing</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="third">
+      <div class="third-content">
+        <h2>
+          Get started with Blue Lumine<br />
+          in three easy steps
+        </h2>
+      </div>
+
+      <div class="wrapper">
+        <div class="text-section">
+          <ol>
+            <li>
+              <div class="step">
+                <h3>Book a call</h3>
+                <p>
+                  Schedule a session with our revenue specialists. We’ll walk
+                  you through how Blue Lumine can streamline your data and
+                  collection systems for maximum efficiency.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div class="step">
+                <h3>Connect your sources</h3>
+                <p>
+                  Easily integrate your existing payment channels, analytics
+                  tools, and business data all in one seamless platform.
+                </p>
+              </div>
+            </li>
+
+            <li>
+              <div class="step">
+                <h3>Smart Onboarding</h3>
+                <p>
+                  Our team guides you through setup, helping you automate
+                  revenue tracking, uncover insights, and start optimizing
+                  collections right away.
+                </p>
+              </div>
+            </li>
+          </ol>
+
+          <a href="#" class="btn">Get started</a>
+        </div>
+
+        <div class="illustration">
+          <img
+            src="images/icons/hand_diagram.png"
+            alt="Data chart illustration"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="fourth">
+      <!-- <div class="svg-curve">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#ffffff"
+            fill-opacity="1"
+            d="M0,96L60,90.7C120,85,240,75,360,90.7C480,107,600,149,720,181.3C840,213,960,235,1080,229.3C1200,224,1320,192,1380,176L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+          ></path>
+        </svg>
+      </div>-->
+
+      <div class="svg-curve">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100">
+          <path
+            d="M1000 0H0v52C62.5 28 125 4 250 4c250 0 250 96 500 96 125 0 187.5-24 250-48V0Z"
+            fill="#FFFFFF"
+          ></path>
+        </svg>
+      </div>
+
+      <div class="fourth-content">
+        <div class="fth-img-txt">
+          <div class="fth-txt">
+            <h2>See What Our Clients Are Saying About Us<br /></h2>
+            <p>
+              What government agencies and insitutions say about our services
+            </p>
+          </div>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p class="testimonial-content">
+              Blue Lumine helped us consolidate payment data from five different
+              platforms into one dashboard. We now close our books twice as fast
+              each month.
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/women/45.jpg"
+                alt="Sarah Johnson"
+                class="author-avatar"
+              />
+              <div class="author-info">
+                <h4>Amara K.</h4>
+                <p>Head of Finance at TradeLink</p>
+
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-content">
+              We saw a 30% improvement in revenue tracking accuracy after
+              onboarding. The insights are instant, and the automation just
+              works.
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Kwame Osei"
+                class="author-avatar"
+              />
+              <div class="author-info">
+                <h4>David L.</h4>
+                <p>Growth Manager at NovaTech</p>
+
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <p class="testimonial-content">
+              Their onboarding was smooth, and our team didn’t need extra
+              training. Blue Lumine has become the backbone of our collections
+              process.
+            </p>
+            <div class="testimonial-author">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Ama Mensah"
+                class="author-avatar"
+              />
+              <div class="author-info">
+                <h4>Nadia R.</h4>
+                <p>Host, Director of Operations at Apex Holdings</p>
+
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--<div class="custom-shape-divider-top-1762370642">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z" class="shape-fill"></path>
+    </svg>
+</div>-->>
+
+        <!--
+        <div class="custom-shape-divider-bottom-1762215758">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0V6c0,21.6,291,111.46,741,110.26,445.39,3.6,459-88.3,459-110.26V0Z" class="shape-fill"></path>
+    </svg>
+</div>
+        -->
+      </div>
+      <!--
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,96L60,90.7C120,85,240,75,360,90.7C480,107,600,149,720,181.3C840,213,960,235,1080,229.3C1200,224,1320,192,1380,176L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+        ></path>
+      </svg>-->
+    </section>
+    <script src="test.js"></script>
   </body>
 </html>

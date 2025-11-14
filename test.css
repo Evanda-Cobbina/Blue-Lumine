@@ -1,0 +1,1329 @@
+@font-face {
+  font-family: "Bagoss Standard TRIAL";
+  src: url("../fonts/BagossStandardTRIAL-Regular.woff2") format("woff2"),
+    url("../fonts/BagossStandardTRIAL-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bagoss Standard TRIAL";
+  src: url("../fonts/BagossStandardTRIAL-Bold.woff2") format("woff2"),
+    url("../fonts/BagossStandardTRIAL-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bagoss Standard TRIAL", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}
+html,
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/*Variables that will be mainly used*/
+:root {
+  --black: #111111;
+  --white: #ffffff;
+  --darkblue: #204ecf;
+  --lightblue: #dde6ff;
+  --charcoal: #0b0b0b;
+  --gray: #6b6b6b;
+  --success_green: #14c484;
+  --main-text: var(--black);
+  --nav-bg: var(--white); /* Changed from darkblue to white to match your nav */
+  --nav-text: var(--black);
+  --btn-text: var(--white);
+  --btn-bg: var(--darkblue);
+  --nav-border: transparent;
+  --blk-text: var(--black);
+  --wht-text: var(--white);
+}
+:root {
+  --nav-h: 68px; /* change to match your nav height if needed */
+}
+
+body {
+  font-family: "Bagoss Standard TRIAL", sans-serif;
+}
+/************** The Navigation *************/
+nav,
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  background-color: var(--nav-bg);
+  transition: background-color 220ms ease, box-shadow 220ms ease,
+    transform 220ms ease;
+  z-index: 1200;
+  position: relative; /* default - not fixed until scrolled */
+  box-sizing: border-box;
+}
+
+/* When scrolled, pin the navbar but don't change its width or add extra padding */
+.navbar.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--nav-bg);
+  box-shadow: 0 6px 18px rgba(18, 24, 35, 0.08);
+  /* IMPORTANT: no percent padding-right or weird transforms here */
+  padding-left: 1.2rem;
+  padding-right: 2.3rem;
+  will-change: transform;
+}
+
+.logo {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-left: 7rem;
+  margin-top: -0.5rem;
+  font-family: "Bagoss Standard TRIAL", sans-serif;
+}
+
+.logo span {
+  color: var(--darkblue);
+}
+span {
+  color: var(--darkblue);
+}
+
+/* Desktop nav-links (kept static in larger screens) */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-links.active {
+  transform: translateY(0);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--main-text);
+  font-size: 1.05rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+.act-links {
+  margin-top: 0.5rem;
+  margin-right: 5rem;
+  transform: translateX(-10px);
+}
+
+.nav-links a:hover {
+  color: var(--darkblue);
+  transform: translateY(-2px);
+}
+
+.btn-contact {
+  padding: 0.6rem 1.5rem;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-left: 4rem;
+  transform: translateY(-1px);
+}
+
+.btn-contact:hover {
+  background-color: var(--accent_Sky);
+  transform: translateY(-2px);
+}
+
+/* The hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 37px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  height: 1.5px;
+  width: 100%;
+  background-color: var(--nav-text);
+  transition: all 0.3s ease;
+  margin-right: 5rem;
+}
+
+/* Active state for hamburger when menu is open */
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+  height: 5px;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+  height: 5px;
+}
+
+/********** The Hero Section *****************/
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parallelogram {
+  width: 53%;
+  height: 79px;
+  background-color: var(--darkblue);
+  transform: skew(-20deg);
+  margin: 5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.parallelogram h1 {
+  color: var(--white);
+  display: inline-block; /* needed so transform doesn't affect layout like block-level centering */
+  transform: skew(20deg); /* inverse of parent's -20deg */
+  transform-origin: center;
+  margin: 0;
+  padding: 0 0.8rem 0 0.6rem;
+  font-size: 3.4rem;
+  font-weight: 700;
+}
+.hero-content h2 {
+  text-align: center;
+  font-size: 2.9rem;
+  margin-top: -4.5rem;
+  font-weight: 600;
+  color: var(--blk-text);
+}
+.hero-content p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 0.65rem;
+}
+
+.hero-btn {
+  padding: 0.92rem 1.5rem 0.94rem 1.5rem;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 490;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 2.8rem auto 0 auto;
+  width: fit-content; /* Ensure button only takes needed space */
+}
+
+.hero-content p a {
+  text-decoration: none;
+  font-style: solid;
+}
+
+/** Styling the balance sheet image **/
+.bck-img {
+  position: absolute;
+  top: 42%;
+  left: 10%;
+
+  /*  opacity: 0.1;*/
+  z-index: -1;
+}
+.bck-img img {
+  width: 90%;
+  height: auto;
+  border: none;
+  /*opacity: 0.1;*/
+}
+
+/***************** The Second Section ***************/
+.second {
+  margin-top: 33rem;
+  padding: 4rem 2rem;
+}
+.second-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.second-content h2 {
+  font-size: 2.9rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.second-content p {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  line-height: 1.3;
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: -6.5rem;
+  margin-right: 8rem;
+}
+
+.cards-container .card {
+  width: 27%;
+  text-align: left;
+}
+.cards-container .card img {
+  width: auto;
+  height: 60vh;
+}
+.cards-container .card h3 {
+  font-size: 1.2rem;
+  margin-top: -8rem;
+  font-weight: 600;
+  text-align: left;
+  margin-left: 7.9rem;
+}
+
+/******* the third section ***********/
+.third {
+  margin: 5rem 12rem 5rem 12rem;
+  font-family: "Inter", sans-serif;
+  color: var(--main-text);
+  padding: 80px 20px;
+}
+.third-content h2 {
+  text-align: center;
+  margin-bottom: 5rem;
+  font-size: 2.9rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 100%;
+  gap: 60px;
+}
+
+.text-section {
+  flex: 1;
+  max-width: 550px;
+}
+
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: step;
+}
+
+li {
+  position: relative;
+  counter-increment: step;
+  padding-left: 50px; /* space for number and line */
+  margin-bottom: 50px;
+}
+
+li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li::after {
+  /* This is the vertical line beside each number */
+  content: "";
+  position: absolute;
+  left: 15px;
+  top: 36px; /* starts just below number */
+  width: 2px;
+  height: calc(100% - 10px); /* fills the rest of the item */
+  background-color: #7c6161;
+}
+
+li:last-child::after {
+  height: calc(140% - 20px);
+}
+
+ol {
+  counter-reset: step;
+}
+
+.step h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--blk-text);
+}
+
+.step p {
+  margin: 8px 0 0;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--blk-text);
+  line-height: 1.25;
+  max-width: 480px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 32px;
+  padding: 0.92rem 1.5rem 0.94rem 1.5rem;
+  margin-left: 2.8rem;
+  transform: translateY(-90%);
+  text-decoration: none;
+  margin-top: 40px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2563eb;
+}
+
+.illustration {
+  flex-shrink: 0;
+  width: 30%;
+  transform: translateY(-9%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration img {
+  width: 180%;
+  height: auto;
+  object-fit: contain;
+}
+
+/******************************* The Fourth Section **********************************/
+.fourth {
+  position: relative;
+  background-color: rgb(1, 1, 166);
+  z-index: -1;
+}
+.fourth-content {
+  margin-top: -6rem;
+}
+.fth-txt {
+  padding-left: 5rem;
+}
+.fth-txt h2 {
+  text-align: left;
+  font-size: 1.7rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: var(--wht-text);
+}
+.fth-txt p {
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 6rem;
+  color: var(--wht-text);
+}
+/*
+.custom-shape-divider-bottom-1762215758 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+
+.custom-shape-divider-bottom-1762215758 svg {
+  position: relative;
+  display: block;
+  width: calc(113% + 1.3px);
+  height: 590px;
+}
+
+.custom-shape-divider-bottom-1762215758 .shape-fill {
+  fill: #204ecf;
+}
+*/
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(to right, var(--white), var(--lightblue));
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-bottom: 7rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.testimonial-card {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--lightblue);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--lightblue);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.testimonial-content {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.testimonial-content::before {
+  content: '"';
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  font-size: 4rem;
+  color: var(--lightblue);
+  font-family: serif;
+  line-height: 1;
+  z-index: 0;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 2px solid var(--lightblue);
+}
+
+.author-info h4 {
+  color: var(--darkblue);
+  margin-bottom: 0.3rem;
+}
+
+.stars {
+  color: var(--darkblue);
+  margin-bottom: 0.5rem;
+}
+
+/************* Media Queries **************/
+
+@media (max-width: 800px) {
+  .navbar.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transition: all 0.45s ease;
+    padding-right: 16.5%;
+    overflow: hidden;
+  }
+
+  .nav-links {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0; /* sits directly BELOW the nav bar */
+    width: 100%;
+    max-width: 100vw; /* IMPORTANT to prevent widening */
+    padding: 1.2rem 1.2rem;
+    background-color: var(--darkblue); /* or whatever mobile bg you want */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* keep left alignment as you requested */
+    transform: translateY(-110%); /* hidden above */
+    transition: transform 320ms ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden; /* don't contribute to page width */
+    box-sizing: border-box;
+  }
+
+  /* Ensure no extra margin or percent pushes menu wider */
+  .nav-links {
+    margin-right: 0;
+  }
+
+  body.nav-scrolled .nav-links {
+    background-color: var(--neutral_Gray);
+  }
+
+  /* When active, slide the menu into view */
+  .nav-links.active {
+    transform: translateY(0);
+    top: var(--nav-h);
+  }
+
+  /* Keep nav height space for the document flow so content doesn't jump:
+     (only if you use .navbar.scrolled to become fixed) */
+  .navbar-placeholder {
+    display: none; /* we will toggle it if needed; JS included below can manage this */
+  }
+
+  /* Visual rule for links inside mobile menu */
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+    color: var(--wht-text);
+    font-size: 1.2rem;
+    padding-right: 12.5rem;
+  }
+
+  .act-links {
+    margin-left: 7rem;
+    color: var(--wht-text);
+  }
+
+  .nav-links a:hover {
+    color: aqua;
+  }
+  /* Reset transforms that were causing overflow */
+  .hamburger {
+    transform: none;
+  }
+  .cards-container {
+    transform: none !important;
+  } /* temporarily neutralize suspicious transforms */
+  .illustration img,
+  .bck-img img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 10px;
+    cursor: pointer;
+    z-index: 1250; /* above fixed nav */
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-1px) rotate(-45deg);
+  }
+  .btn-contact {
+    padding: 0.6rem 1.5rem;
+    background-color: var(--white);
+    color: var(--btn-bg);
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+    margin-left: 0.1rem;
+    transform: translateX(29%);
+  }
+  .btn-contact:hover {
+    background-color: transparent;
+    color: var(--white);
+    border-color: var(--white);
+    border: solid;
+    border-width: 1.5px;
+  }
+  .logo {
+    margin-left: 2rem;
+  }
+
+  /*the hero section*/
+  .hero {
+    padding-top: 6rem;
+  }
+  .parallelogram {
+    width: 52%;
+    margin-top: 4%;
+    height: 80px;
+  }
+  .parallelogram h1 {
+    font-size: 4rem;
+  }
+  .hero-content h2 {
+    font-size: 3rem;
+    margin-top: -4rem;
+  }
+  .hero-content p {
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0.9rem;
+  }
+
+  .hero-btn {
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 2.8rem auto 0 auto;
+    width: fit-content;
+  }
+
+  .bck-img {
+    top: 77%;
+    left: -10%;
+
+    /*  opacity: 0.1;*/
+    z-index: -1;
+  }
+  .bck-img img {
+    width: 100%;
+  }
+
+  /************ The second section**************/
+  .second {
+    margin-top: 20rem;
+    padding: 4rem 2rem;
+    margin-left: 0.5rem;
+  }
+  .second-content {
+    flex-direction: column;
+    padding: 4rem 0rem;
+    margin-left: 1.5rem;
+  }
+  .second-content h2 {
+    font-size: 2.3rem;
+  }
+  .second-content p {
+    font-size: 1.1rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 0.02rem;
+    transform: translateX(-70px);
+  }
+
+  .cards-container .card {
+    width: 100%;
+    text-align: center;
+  }
+  .cards-container .card img {
+    width: auto;
+    height: 70vh;
+  }
+  .cards-container .card h3 {
+    font-size: 1.12rem;
+    margin-top: -7.9rem;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 8.5rem;
+    width: 110%;
+  }
+
+  /*The fourth section*/
+  .fourth {
+    width: 100%;
+  }
+  /* If you have any svg/divider elements, keep them bounded */
+  .svg-curve,
+  .svg-curve svg {
+    width: 100%;
+    max-width: 100vw;
+    display: block;
+    height: auto;
+  }
+
+  .fth-txt {
+    padding-left: 1rem;
+  }
+  .fth-txt h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 0.7rem;
+  }
+  .fth-txt p {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .parallelogram {
+    width: 60%;
+    margin-top: 4%;
+    height: 80px;
+  }
+  .parallelogram h1 {
+    font-size: 4rem;
+  }
+  .hero-content h2 {
+    font-size: 3rem;
+    margin-top: -4rem;
+  }
+  .hero-content p {
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 0.9rem;
+  }
+}
+
+/****** media query for the third section ******/
+
+@media (max-width: 900px) {
+  .third {
+    margin: 5rem 0rem 5rem 1rem;
+    font-family: "Inter", sans-serif;
+    color: var(--main-text);
+    padding: 80px 20px;
+  }
+  .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .third-content h2 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+
+  .illustration {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .third-content h2 {
+    font-size: 2rem;
+    transform: translateX(-2.5%);
+  }
+
+  li::before {
+    font-size: 18px;
+  }
+
+  .step p {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 15px;
+    padding: 10px 26px;
+  }
+}
+
+/************** The tablet view ***********************/
+@media (min-width: 810px) and (max-width: 1024px) {
+  .logo {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+
+  .nav-links {
+    gap: 2rem;
+    margin-right: -6%;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 0.5rem 0.1rem;
+  }
+  /*This is to give the individual links better spacing. It solved a problem I had*/
+  .act-links {
+    margin-top: 0.5rem;
+    margin-right: 4rem;
+  }
+
+  /******** The second section**************/
+  .second-content p {
+    font-size: 1.1rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .cards-container {
+    transform: none;
+    flex-direction: column;
+    gap: 0.02rem;
+  }
+  .cards-container .card {
+    width: 100%;
+    text-align: center;
+  }
+  .cards-container .card img {
+    width: auto;
+  }
+  .cards-container .card h3 {
+    margin-left: 16rem;
+    margin-top: -11rem;
+  }
+
+  /***** The third section *****/
+  .third {
+    margin: 5rem 7rem 5rem 7rem;
+    font-family: "Inter", sans-serif;
+    color: var(--main-text);
+    padding: 80px 20px;
+  }
+  .illustration {
+    flex-shrink: 0;
+    width: 30%;
+    transform: translateY(9%);
+    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .illustration img {
+    width: 210%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+@media (min-width: 1020px) and (max-width: 1024px) {
+  .cards-container .card h3 {
+    margin-left: 20rem;
+    margin-top: -6rem;
+  }
+}
+@media (max-width: 830px) {
+  .act-links {
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 840px) and (max-width: 859px) {
+  .illustration {
+    transform: translateY(0%);
+    margin-left: 13rem;
+  }
+
+  .illustration img {
+    width: 290%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 809px) {
+  .logo {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+  }
+
+  /*This is to give the individual links better spacing. It solved a problem I had*/
+  .act-links {
+    margin-top: 0.5rem;
+    margin-right: 3rem;
+  }
+}
+
+/* For larger screens */
+@media (min-width: 769px) {
+  nav {
+    padding: 1.2rem 4rem;
+  }
+
+  .nav-links {
+    margin-left: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .nav-links {
+    position: static;
+    transform: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end; /* aligns links to the right */
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    gap: 2rem;
+  }
+  .nav-links a {
+    text-align: center;
+    width: auto;
+    color: var(--nav-text);
+  }
+
+  /****The fourth*****/
+
+  .svg-curve {
+    margin-bottom: 6rem;
+    transform: translateY(-5%);
+    overflow: hidden;
+  }
+  .fth-txt {
+    padding-left: 3rem;
+  }
+  .fth-txt h2 {
+    text-align: left;
+    font-size: 1.7rem;
+    margin-bottom: 0.7rem;
+  }
+  .fth-txt p {
+    text-align: left;
+    margin-bottom: 5rem;
+  }
+}
+
+/** For other screens**/
+@media (max-width: 770px) {
+  .hamburger {
+    margin-right: -10px;
+  }
+
+  .hero {
+    margin-left: 10%;
+  }
+
+  .bck-img {
+    top: 65%;
+    left: -5%;
+
+    /*  opacity: 0.1;*/
+    z-index: -1;
+  }
+  .bck-img img {
+    width: 110%;
+  }
+}
+
+/*For smaller screens*/
+@media (max-width: 480px) {
+  .nav-links a {
+    color: var(--wht-text) !important;
+  }
+
+  .act-links {
+    color: var(--wht-text);
+  }
+
+  .hamburger {
+    margin-right: -2rem;
+  }
+
+  .logo {
+    margin-left: 1rem;
+    margin-top: 2px;
+    font-size: 1.2rem;
+  }
+
+  /* hero section */
+  .hero {
+    margin-left: 12%;
+  }
+
+  .hero-btn {
+    transform: none;
+    margin: 2.8rem auto 0 auto;
+    width: fit-content;
+  }
+
+  .parallelogram {
+    width: 67%;
+  }
+
+  .parallelogram h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .bck-img {
+    top: 67.8%;
+    left: -5%;
+
+    /*  opacity: 0.1;*/
+    z-index: -1;
+  }
+  .bck-img img {
+    width: 110%;
+  }
+
+  /************ The second section**************/
+  .second {
+    margin-top: 20rem;
+    padding: 4rem 1rem;
+    margin-left: 0rem;
+    overflow: hidden;
+  }
+  .second-content {
+    flex-direction: column;
+    padding: 4rem 0rem;
+    margin-left: 1.5rem;
+  }
+  .second-content h2 {
+    font-size: 2.3rem;
+  }
+  .second-content p {
+    font-size: 1.1rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    gap: 0.02rem;
+    transform: translateX(-70px);
+  }
+
+  .cards-container .card {
+    width: 90%;
+    text-align: center;
+  }
+  .cards-container .card img {
+    width: auto;
+    height: 60vh;
+  }
+  .cards-container .card h3 {
+    font-size: 1.12rem;
+    margin-top: -7.9rem;
+    font-weight: 600;
+    text-align: center;
+    margin-left: 8.8rem;
+    width: 110%;
+  }
+}
+
+@media (max-width: 431px) and (min-width: 429px) {
+  /*This is for a very specific screen size that vexing me*/
+
+  .fth-txt {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 411px) and (min-width: 414px) {
+  /*the first section*/
+  .bck-img {
+    top: 10%;
+  }
+
+  /*The fourth section*/
+}
+
+@media (max-width: 413px) {
+  /*The fourth section*/
+
+  .svg-curve {
+    width: 105%;
+    overflow: hidden;
+  }
+  .fth-txt {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 399px) and (max-width: 428px) {
+  .bck-img {
+    top: 92%;
+    left: -5%;
+
+    /*  opacity: 0.1;*/
+    z-index: -1;
+  }
+  .bck-img img {
+    width: 110%;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 369px) {
+  .logo {
+    font-size: 0.89rem;
+    margin-left: 1rem;
+  }
+  .hamburger {
+    width: 9%;
+  }
+  .cards-container {
+    transform: translateX(-80%);
+  }
+  .cards-container .card h3 {
+    margin-left: 9rem;
+    margin-top: -7.9rem;
+  }
+  .cards-container .card img {
+    height: 70vh;
+  }
+}
+@media (min-width: 370px) and (max-width: 399px) {
+  /*This is for a very specific screen size that vexing me*/
+  .second-content {
+    flex-direction: column;
+    padding: 4rem 0rem;
+    margin-left: 1.5rem;
+  }
+  .second-content h2 {
+    font-size: 2.3rem;
+  }
+  .second-content p {
+    font-size: 1.1rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .cards-container .card {
+    width: 90%;
+    text-align: center;
+  }
+  .cards-container .card img {
+    width: auto;
+    height: 60vh;
+  }
+  .cards-container {
+    transform: translateX(-30%);
+  }
+  .cards-container .card h3 {
+    margin-left: 8.5rem;
+    margin-top: -7.9rem;
+  }
+}
+@media (min-width: 371px) and (max-width: 379px) {
+  /*This is for a very specific screen size that vexing me*/
+  .cards-container {
+    transform: translateX(-10%);
+  }
+  .cards-container .card h3 {
+    margin-left: 6.2rem;
+    margin-top: -7.9rem;
+  }
+}
+@media (min-width: 359px) and (max-width: 362px) {
+  /*This is for a very specific screen size that vexing me*/
+  .cards-container {
+    transform: translateX(-45%);
+  }
+  .cards-container .card h3 {
+    margin-left: 9.8rem;
+    margin-top: -7.9rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 769px) {
+  /*This is for a very specific screen size that vexing me*/
+  .cards-container {
+    transform: none;
+  }
+  .cards-container .card h3 {
+    margin-left: 3rem;
+    margin-top: -11rem;
+  }
+}
+@media (min-width: 343px) and (max-width: 345px) {
+  /*This is for a very specific screen size that vexing me*/
+  .cards-container .card {
+    width: 100%;
+    text-align: center;
+  }
+  .cards-container {
+    transform: translateX(-136px);
+  }
+  .cards-container .card h3 {
+    margin-left: 13rem;
+    margin-top: -9rem;
+  }
+}
+@media (min-width: 500px) and (max-width: 542px) {
+  /*This is for a very specific screen size that vexing me*/
+  .cards-container {
+    transform: translateX(-25px);
+  }
+  .cards-container .card h3 {
+    margin-left: 4rem;
+    margin-top: -8rem;
+  }
+}
