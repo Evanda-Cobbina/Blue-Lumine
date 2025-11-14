@@ -286,6 +286,15 @@
   }
 }
 
+@media (max-width: 411px) and (min-width: 414px) {
+  /*the first section*/
+  .bck-img {
+    top: 10%;
+  }
+
+  /*The fourth section*/
+}
+
 @media (max-width: 413px) {
   /*The fourth section*/
 

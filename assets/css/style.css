@@ -24,6 +24,10 @@
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
 }
+html,
+body {
+  overflow-x: hidden;
+}
 
 /*Variables that will be mainly used*/
 :root {
@@ -581,6 +585,16 @@ ol {
 /************* Media Queries **************/
 
 @media (max-width: 800px) {
+  .navbar.scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    transition: all 0.45s ease;
+    padding-right: 16.5%;
+    overflow: hidden;
+  }
   .nav-links {
     position: fixed;
     top: -100%;
@@ -753,6 +767,9 @@ ol {
   }
 
   /*The fourth section*/
+  .fourth {
+    width: 100%;
+  }
   .svg-curve {
     margin-bottom: 6rem;
     transform: translateY(-5%);
