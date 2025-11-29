@@ -35,6 +35,7 @@ body {
   --black: #111111;
   --white: #ffffff;
   --darkblue: #204ecf;
+  --btn_blue: #417cfb;
   --lightblue: #dde6ff;
   --charcoal: #0b0b0b;
   --gray: #6b6b6b;
@@ -89,7 +90,7 @@ nav,
 .logo {
   font-size: 1.2em;
   font-weight: bold;
-  margin-left: 7rem;
+  margin-left: 9rem;
   margin-top: -0.5rem;
   font-family: "Bagoss Standard TRIAL", sans-serif;
 }
@@ -107,7 +108,7 @@ span {
   gap: 2rem;
   align-items: center;
   list-style: none;
-  margin: 0;
+  margin: 0 9rem 0 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -153,7 +154,7 @@ span {
 }
 
 .btn-contact:hover {
-  background-color: var(--accent_Sky);
+  background-color: var(--btn_blue);
   transform: translateY(-2px);
 }
 
@@ -168,11 +169,10 @@ span {
 }
 
 .hamburger .bar {
-  height: 1.5px;
+  height: 5px;
   width: 100%;
   background-color: var(--nav-text);
   transition: all 0.3s ease;
-  margin-right: 5rem;
 }
 
 /* Active state for hamburger when menu is open */
@@ -590,8 +590,8 @@ ol {
     right: 0;
     width: 100%;
     transition: all 0.45s ease;
-    padding-right: 16.5%;
-    overflow: hidden;
+    padding-right: 7%;
+    padding-left: 7%;
   }
 
   .nav-links {
@@ -643,6 +643,9 @@ ol {
     font-size: 1.2rem;
     padding-right: 12.5rem;
   }
+  .nav-links a .btn-contact {
+    transform: translateX(57%);
+  }
 
   .act-links {
     margin-left: 7rem;
@@ -652,10 +655,12 @@ ol {
   .nav-links a:hover {
     color: aqua;
   }
-  /* Reset transforms that were causing overflow */
-  .hamburger {
-    transform: none;
+
+  .btn-contact {
+    margin-left: 4rem;
+    transform: translateY(-1px);
   }
+
   .cards-container {
     transform: none !important;
   } /* temporarily neutralize suspicious transforms */
@@ -669,16 +674,15 @@ ol {
 
   .hamburger {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 10px;
     cursor: pointer;
-    z-index: 1250; /* above fixed nav */
+    width: 49px;
+    z-index: 1250;
+    /* Reset transforms that were causing overflow */
+    transform: translateX(-52px);
   }
 
   .hamburger.active .bar:nth-child(1) {
-    transform: translateY(5px) rotate(45deg);
+    transform: translateY(290%) rotate(45deg);
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -686,7 +690,7 @@ ol {
   }
 
   .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-1px) rotate(-45deg);
+    transform: translateY(-18px) rotate(-45deg);
   }
   .btn-contact {
     padding: 0.6rem 1.5rem;
@@ -708,13 +712,13 @@ ol {
     border: solid;
     border-width: 1.5px;
   }
-  .logo {
-    margin-left: 2rem;
-  }
 
   /*the hero section*/
   .hero {
     padding-top: 6rem;
+  }
+  .hero-content {
+    padding-right: 3rem;
   }
   .parallelogram {
     width: 52%;
