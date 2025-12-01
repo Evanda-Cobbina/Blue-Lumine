@@ -91,7 +91,7 @@ nav,
   font-size: 1.2em;
   font-weight: bold;
   margin-left: 9rem;
-  margin-top: -0.5rem;
+  margin-top: 0rem;
   font-family: "Bagoss Standard TRIAL", sans-serif;
 }
 
@@ -150,7 +150,16 @@ span {
   font-size: 1rem;
   transition: all 0.3s ease;
   margin-left: 4rem;
-  transform: translateY(-1px);
+  transform: translateY(1.5px);
+
+  /* Prevent text wrapping and keep the button sized to its content */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  width: auto;
+  min-width: 120px; /* adjust if needed to fit "Contact Sales" on one line */
+  box-sizing: border-box;
 }
 
 .btn-contact:hover {
@@ -641,7 +650,7 @@ ol {
     padding: 0.75rem 0.5rem;
     color: var(--wht-text);
     font-size: 1.2rem;
-    padding-right: 12.5rem;
+    transform: translateX(-27%);
   }
   .nav-links a .btn-contact {
     transform: translateX(57%);
@@ -838,7 +847,7 @@ ol {
 
 @media (max-width: 700px) {
   .parallelogram {
-    width: 60%;
+    width: 90%;
     margin-top: 4%;
     height: 80px;
   }
@@ -903,6 +912,24 @@ ol {
 }
 
 /************** The tablet view ***********************/
+@media (max-width: 1285px) and (min-width: 1026px) {
+  .cards-container {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    gap: 1rem;
+    margin-top: -6.5rem;
+    margin-right: -10rem;
+    padding-left: 5rem;
+    transform: translateX(-6%);
+  }
+
+  .cards-container .card h3 {
+    padding-left: 1rem;
+    margin-top: -7.5rem;
+  }
+}
+
 @media (min-width: 810px) and (max-width: 1024px) {
   .logo {
     font-size: 1rem;
@@ -924,6 +951,12 @@ ol {
     margin-right: 4rem;
   }
 
+  /**** The hero section****/
+  .bck-img {
+    top: 60%;
+    left: 0%;
+  }
+
   /******** The second section**************/
   .second-content p {
     font-size: 1.1rem;
@@ -934,6 +967,7 @@ ol {
     transform: none;
     flex-direction: column;
     gap: 0.02rem;
+    padding-left: 5rem;
   }
   .cards-container .card {
     width: 100%;
@@ -941,10 +975,11 @@ ol {
   }
   .cards-container .card img {
     width: auto;
+    height: 520px;
   }
   .cards-container .card h3 {
-    margin-left: 16rem;
-    margin-top: -11rem;
+    margin-left: 17rem !important;
+    margin-top: -8rem !important;
   }
 
   /***** The third section *****/
@@ -970,20 +1005,57 @@ ol {
     object-fit: contain;
   }
 }
-@media (min-width: 1020px) and (max-width: 1024px) {
+
+@media (min-width: 1020px) and (max-width: 1025px) {
+  /******* The hero section**************/
+  .bck-img {
+    top: 33%;
+    left: 0%;
+  }
+
+  /******** The second section**************/
   .cards-container .card h3 {
     margin-left: 20rem;
     margin-top: -6rem;
   }
 }
-@media (max-width: 830px) {
-  .act-links {
-    margin-top: 0.5rem;
-    margin-right: 1rem;
+
+@media (min-width: 900px) and (max-width: 920px) {
+  /******* The hero section *********/
+  .bck-img {
+    top: 35%;
+    left: 0%;
+  }
+  /*The first section*/
+  .cards-container {
+    width: 110%;
+  }
+  .cards-container .card img {
+    margin-right: 8rem;
+  }
+
+  .cards-container .card h3 {
+    margin-right: 20rem;
   }
 }
 
 @media (min-width: 840px) and (max-width: 859px) {
+  /******* The hero section *********/
+  .bck-img {
+    top: 35%;
+    left: 0%;
+  }
+
+  /*The first section*/
+  .cards-container .card {
+    margin-left: 3rem;
+  }
+
+  .cards-container .card h3 {
+    transform: translateX(-95px);
+    margin-top: -8.5rem;
+  }
+
   .illustration {
     transform: translateY(0%);
     margin-left: 13rem;
@@ -991,6 +1063,24 @@ ol {
 
   .illustration img {
     width: 290%;
+  }
+}
+@media (max-width: 830px) {
+  .act-links {
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+  }
+
+  /**** The hero section****/
+  .bck-img {
+    top: 40%;
+    left: 0%;
+  }
+
+  /******** The first section**************/
+  .cards-container .card h3 {
+    margin-left: 10.5rem !important;
+    margin-top: -8rem;
   }
 }
 
@@ -1007,6 +1097,13 @@ ol {
   }
 }
 
+@media (min-width: 768px) and (max-width: 800px) {
+  .nav-links {
+    padding-left: 6rem;
+    width: 92%;
+  }
+}
+
 /* For larger screens */
 @media (min-width: 769px) {
   nav {
@@ -1018,6 +1115,10 @@ ol {
   }
 }
 @media (min-width: 768px) {
+  /****The first section*****/
+  .cards-container .card h3 {
+  }
+
   /****The fourth*****/
 
   .svg-curve {
@@ -1059,12 +1160,41 @@ ol {
   .bck-img img {
     width: 110%;
   }
+
+  /*the hero section*/
+  .parallelogram {
+    width: 62%;
+    margin-top: 4%;
+    height: 80px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 769px) {
+  .nav-links {
+    width: 100%;
+    padding-left: 8rem;
+  }
+
+  /**** The hero section****/
+  .bck-img {
+    top: 50%;
+    left: 0%;
+  }
 }
 
 @media (min-width: 500px) and (max-width: 542px) {
   .logo {
     font-size: 1rem;
     margin-left: 2rem;
+  }
+
+  /* Hero section */
+  .bck-img {
+    top: 85%;
+    left: 0%;
+  }
+  .parallelogram {
+    width: 92%;
   }
 }
 
@@ -1179,18 +1309,71 @@ ol {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
+  /*the hero section*/
+  .parallelogram {
+    width: 76%;
+    margin-top: 4%;
+    height: 80px;
+  }
 }
 
-@media (max-width: 411px) and (min-width: 414px) {
+@media (max-width: 415px) {
+  /**** The hero section****/
+  .bck-img {
+    top: 69% !important;
+    left: 0%;
+  }
+}
+
+@media (min-width: 411px) and (max-width: 415px) {
+  /*the hero section*/
+  .parallelogram {
+    width: 78%;
+    margin-top: 4%;
+    height: 80px;
+  }
+
   /*the first section*/
   .bck-img {
-    top: 10%;
+    top: 50%;
   }
 
   /*The fourth section*/
 }
 
 @media (max-width: 413px) {
+  /*the hero section*/
+  .parallelogram {
+    width: 80%;
+    margin-top: 4%;
+    height: 80px;
+  }
+  .bck-img {
+    top: 69% !important;
+    left: 0%;
+  }
+
+  /* the first section*/
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: -6.5rem;
+    margin-right: 5rem;
+    padding-left: 0rem;
+  }
+  .cards-container .card {
+    transform: translateX(-95px);
+  }
+
+  .cards-container .card h3 {
+    padding-left: -3rem;
+    margin-top: -8.5rem;
+    padding-right: 4rem;
+  }
+
   /*The fourth section*/
 
   .svg-curve {
@@ -1224,6 +1407,7 @@ ol {
   .hamburger {
     width: 9%;
   }
+
   .cards-container {
     transform: translateX(-80%);
   }
@@ -1236,6 +1420,13 @@ ol {
   }
 }
 @media (min-width: 370px) and (max-width: 399px) {
+  /*the hero section*/
+  .parallelogram {
+    width: 88%;
+    margin-top: 4%;
+    height: 80px;
+  }
+
   /*This is for a very specific screen size that vexing me*/
   .second-content {
     flex-direction: column;
@@ -1268,6 +1459,12 @@ ol {
   }
 }
 @media (min-width: 371px) and (max-width: 379px) {
+  /**** The hero section****/
+  .bck-img {
+    top: 89% !important;
+    left: 0%;
+  }
+
   /*This is for a very specific screen size that vexing me*/
   .cards-container {
     transform: translateX(-10%);
@@ -1278,6 +1475,12 @@ ol {
   }
 }
 @media (min-width: 359px) and (max-width: 362px) {
+  /**** The hero section****/
+  .bck-img {
+    top: 85% !important;
+    left: 0%;
+  }
+
   /*This is for a very specific screen size that vexing me*/
   .cards-container {
     transform: translateX(-45%);
@@ -1287,20 +1490,22 @@ ol {
     margin-top: -7.9rem;
   }
 }
-@media (min-width: 767px) and (max-width: 769px) {
-}
+
 @media (min-width: 343px) and (max-width: 345px) {
   /*This is for a very specific screen size that vexing me*/
   .cards-container .card {
-    width: 100%;
     text-align: center;
+    transform: translateX(-120px);
   }
   .cards-container {
-    transform: translateX(-136px);
+    width: 100%;
   }
   .cards-container .card h3 {
-    margin-left: 13rem;
+    margin-left: 8rem;
     margin-top: -9rem;
+  }
+  .cards-container .card img {
+    height: 60vh;
   }
 }
 @media (min-width: 500px) and (max-width: 542px) {
