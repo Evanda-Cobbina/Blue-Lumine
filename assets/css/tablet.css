@@ -426,6 +426,12 @@
   .cards-container .card h3 {
     padding-right: 12rem;
   }
+
+  /*The fourth section*/
+  .testimonials-grid {
+    padding-left: 4.1rem;
+    padding-right: 5rem;
+  }
 }
 
 @media (max-width: 415px) {
@@ -605,6 +611,12 @@
     margin-top: -7.9rem;
     transform: translateX(-70px);
   }
+
+  /* The fourth section*/
+  .testimonials-grid {
+    padding-left: 2.5rem;
+    padding-right: 5rem;
+  }
 }
 @media (min-width: 359px) and (max-width: 361px) {
   /**** The hero section****/
@@ -628,6 +640,12 @@
     margin-top: -7.9rem;
     padding-right: 10rem;
   }
+
+  /*The fourth section*/
+  .testimonials-grid {
+    padding-left: 2rem;
+    padding-right: 5rem;
+  }
 }
 
 @media (min-width: 343px) and (max-width: 345px) {
@@ -648,7 +666,14 @@
   .cards-container .card img {
     height: 60vh;
   }
+
+  /*The fourth section*/
+  .testimonials-grid {
+    padding-left: 1.4rem;
+    padding-right: 5rem;
+  }
 }
+
 @media (min-width: 500px) and (max-width: 542px) {
   /*This is for a very specific screen size that vexing me*/
   .cards-container {
@@ -662,6 +687,12 @@
     padding-right: 0rem;
     margin-left: 0rem;
     margin-top: -8rem;
+  }
+
+  /*The fourth section*/
+  .testimonials-grid {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 }
 
