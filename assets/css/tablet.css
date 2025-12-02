@@ -876,6 +876,26 @@
     margin-left: 2rem;
     margin-top: 0.5rem;
   }
+
+  /***** third section *****/
+  .third-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+  }
+  .step h3 {
+    font-size: 1.7rem;
+  }
+  .step p {
+    font-size: 1.18rem;
+  }
+  .btn {
+    font-size: 19px;
+    padding: 0.92rem 1.5rem 0.94rem 1.5rem;
+  }
+
+  .illustration img {
+    display: none;
+  }
 }
 @media (min-width: 800px) and (max-width: 839px) {
   .nav-links {
