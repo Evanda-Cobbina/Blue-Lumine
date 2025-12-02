@@ -808,11 +808,45 @@
     height: auto;
     object-fit: contain;
   }
+
+  /***** footer ******/
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-logo h2 {
+    font-size: 1.7rem;
+  }
+
+  .footer-links {
+    gap: 2.5rem;
+    padding-left: 0rem;
+    padding-bottom: 1rem;
+  }
 }
 @media (min-width: 1020px) and (max-width: 1024px) {
   .cards-container .card h3 {
     margin-left: 20rem;
     margin-top: -6rem;
+  }
+
+  /***** footer ******/
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-logo h2 {
+    font-size: 1.7rem;
+  }
+
+  .footer-links {
+    gap: 2.5rem;
+    padding-left: 0rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -854,5 +888,22 @@
   .act-links {
     margin-left: 2rem;
     margin-right: 1.5rem;
+  }
+
+  /***** footer ******/
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-logo h2 {
+    font-size: 1.7rem;
+  }
+
+  .footer-links {
+    gap: 2.5rem;
+    padding-left: 0rem;
+    padding-bottom: 1rem;
   }
 }

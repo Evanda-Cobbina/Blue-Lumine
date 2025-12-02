@@ -1,127 +1,78 @@
+// Replace the current contents of assets/js/app.js with this
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
   const navbar = document.querySelector(".navbar");
   const body = document.body;
+  const NAV_BREAKPOINT = 800; // matches our CSS media query
 
-  // --- BURGER MENU TOGGLE ---
-  hamburger?.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    navLinks.classList.toggle("active");
+  // utility: close mobile menu
+  function closeMobileMenu() {
+    hamburger.classList.remove("active");
+    navLinks.classList.remove("active");
+    body.style.overflow = "";
+  }
 
-    // Prevent background scrolling when menu is open
+  // utility: open mobile menu
+  function openMobileMenu() {
+    hamburger.classList.add("active");
+    navLinks.classList.add("active");
+    // prevent background from scrolling when mobile menu is open
+    body.style.overflow = "hidden";
+  }
+
+  // Safe guard: if elements missing - fail silently
+  if (!hamburger || !navLinks || !navbar) return;
+
+  // Toggle the mobile menu only when hamburger is clicked
+  hamburger.addEventListener("click", (e) => {
+    e.stopPropagation();
     if (navLinks.classList.contains("active")) {
-      body.style.overflow = "hidden";
+      closeMobileMenu();
     } else {
-      body.style.overflow = "";
+      openMobileMenu();
     }
   });
 
-  // Close menu when a link is clicked
+  // Close menu when user clicks any link inside it
   document.querySelectorAll(".nav-links a").forEach((link) => {
     link.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      navLinks.classList.remove("active");
-      body.style.overflow = "";
+      closeMobileMenu();
     });
   });
 
-  // --- SMART STICKY NAVBAR ---
+  // Close menu if user clicks outside the menu on mobile
+  document.addEventListener("click", (e) => {
+    const isMobile = window.innerWidth <= NAV_BREAKPOINT;
+    if (!isMobile) return;
+    if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+      closeMobileMenu();
+    }
+  });
+
+  // Smart sticky: add scrolled class, but DON'T change width/padding
   window.addEventListener("scroll", function () {
     if (window.scrollY > 50) {
       navbar.classList.add("scrolled");
+      // ensure menu stays closed while scrolling
+      // (prevents the menu from unexpectedly appearing)
+      // we do NOT forcibly change body overflow here if menu was open
+      // instead we politely close the menu to avoid layout issues
+      if (navLinks.classList.contains("active")) {
+        closeMobileMenu();
+      }
     } else {
       navbar.classList.remove("scrolled");
     }
   });
-});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// JavaScript to toggle the navigation menu
-/*
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const body = document.body;
-let menuOpen = false;
-
-// Mobile Menu Toggle
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navLinks.classList.toggle("active");
-
-  if (navLinks.classList.contains("active")) {
-    body.style.overflow = "hidden";
-  } else {
-    body.style.overflow = "";
-  }
-});
-
-// Close menu when clicking on a link
-document.querySelectorAll(".nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navLinks.classList.remove("active");
-    body.style.overflow = "";
+  // If the user resizes from mobile to desktop, close mobile menu and restore scroll
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > NAV_BREAKPOINT) {
+      closeMobileMenu();
+    }
   });
+
+  // Initialize: ensure menu closed on load
+  closeMobileMenu();
 });
-
-// Add scrolled class to navbar on scroll
-window.addEventListener("scroll", function () {
-  const navbar = document.querySelector(".navbar");
-  if (window.scrollY > 50) {
-    navbar.classList.add("scrolled");
-  } else {
-    navbar.classList.remove("scrolled");
-  }
-});
-
-
-// Initialize scroll state
-window.dispatchEvent(new Event("scroll"));
-
-
-// Scroll behavior for navigation
-/* window.addEventListener("scroll", () => {
-  if (window.scrollY > 50) {
-    body.classList.add("nav-scrolled");
-  } else {
-    body.classList.remove("nav-scrolled");
-  }
-});
-
-// Initialize scroll state
-window.dispatchEvent(new Event("scroll"));
-*/
-
-
-
