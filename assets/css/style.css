@@ -655,6 +655,7 @@ ol {
 
 .social-links a:hover {
   /*background-color: var(--lightblue);*/
+  background-color: transparent;
   color: var(--black);
   transform: translateY(-3px);
 }
