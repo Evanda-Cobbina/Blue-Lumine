@@ -168,6 +168,7 @@
   .cards-container .card h3 {
     margin-left: 10.5rem !important;
     margin-top: -8rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -272,6 +273,9 @@
   .cards-container .card {
     width: 100%;
     margin-right: 12rem;
+  }
+  .cards-container .card h3 {
+    font-size: 1.8rem;
   }
 }
 @media (min-width: 760px) and (max-width: 770px) {
@@ -421,10 +425,13 @@
     width: 100%;
   }
   .cards-container .card {
-    margin-right: 23rem;
+    margin-right: 18rem;
+    width: 110%;
   }
   .cards-container .card h3 {
+    transform: translateX(-19px);
     padding-right: 12rem;
+    font-size: 1.6rem;
   }
 
   /*The fourth section*/
@@ -525,7 +532,13 @@
 }
 @media (min-width: 411px) and (max-width: 413px) {
   .cards-container .card {
-    transform: translateX(-10px);
+    transform: translateX(0px);
+    width: 100%;
+  }
+
+  .cards-container .card h3 {
+    transform: translateX(-25px);
+    font-size: 1.5rem;
   }
 }
 
@@ -567,7 +580,7 @@
 @media (min-width: 370px) and (max-width: 399px) {
   /*the hero section*/
   .parallelogram {
-    width: 88%;
+    width: 66%;
     margin-top: 4%;
     height: 80px;
   }
@@ -599,14 +612,23 @@
     width: 130%;
   }
   .cards-container .card h3 {
-    padding-top: 1.5rem;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    padding-left: 1rem;
   }
 }
 @media (min-width: 371px) and (max-width: 379px) {
+  .nav-links a {
+    padding-right: 1.5rem;
+  }
   /**** The hero section****/
   .bck-img {
     top: 89% !important;
     left: 0%;
+  }
+
+  .parallelogram {
+    width: 68%;
   }
 
   /*This is for a very specific screen size that vexing me*/
@@ -619,7 +641,7 @@
   }
   .cards-container .card h3 {
     margin-left: 2rem;
-    margin-top: -7.9rem;
+    margin-top: -8.5rem;
     transform: translateX(-70px);
   }
 
@@ -638,7 +660,7 @@
 
   /*This is for a very specific screen size that vexing me*/
   .cards-container {
-    width: 100%;
+    width: 115%;
   }
 
   .cards-container .card {
@@ -647,9 +669,9 @@
   }
 
   .cards-container .card h3 {
-    margin-left: 7rem;
-    margin-top: -7.9rem;
-    padding-right: 10rem;
+    transform: translateX(-11%);
+    margin-top: -8rem;
+    font-size: 1.5rem;
   }
 
   /*The fourth section*/
@@ -671,8 +693,9 @@
   }
   .cards-container .card h3 {
     padding-right: 10rem;
-    margin-left: 8rem;
+    margin-left: 6rem;
     margin-top: -9rem;
+    font-size: 1.3rem;
   }
   .cards-container .card img {
     height: 60vh;
@@ -686,6 +709,10 @@
 }
 
 @media (min-width: 500px) and (max-width: 542px) {
+  .parallelogram {
+    width: 90%;
+  }
+
   /*This is for a very specific screen size that vexing me*/
   .cards-container {
     width: 122%;
@@ -732,7 +759,7 @@
   }
 
   .parallelogram {
-    width: 90%;
+    width: 73%;
   }
 }
 
@@ -795,6 +822,7 @@
   .cards-container .card h3 {
     margin-left: 16rem;
     margin-top: -11rem;
+    font-size: 1.4rem;
   }
 
   /***** The third section *****/

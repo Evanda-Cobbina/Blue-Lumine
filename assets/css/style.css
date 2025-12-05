@@ -769,7 +769,7 @@ ol {
   }
 
   .hamburger.active .bar:nth-child(1) {
-    transform: translateY(290%) rotate(45deg);
+    transform: translateY(198%) rotate(45deg);
   }
 
   .hamburger.active .bar:nth-child(2) {
@@ -777,7 +777,7 @@ ol {
   }
 
   .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-18px) rotate(-45deg);
+    transform: translateY(-10px) rotate(-45deg);
   }
   .btn-contact {
     padding: 0.6rem 1.5rem;
@@ -864,8 +864,10 @@ ol {
   }
   .second-content h2 {
     font-size: 2.3rem;
+    text-align: left;
   }
   .second-content p {
+    text-align: left;
     font-size: 1.1rem;
     padding-left: 0rem;
     padding-right: 0rem;
@@ -886,7 +888,7 @@ ol {
     height: 70vh;
   }
   .cards-container .card h3 {
-    font-size: 1.12rem;
+    font-size: 1.3rem;
     margin-top: -7.9rem;
     font-weight: 600;
     text-align: left;
