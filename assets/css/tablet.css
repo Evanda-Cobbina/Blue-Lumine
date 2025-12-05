@@ -472,10 +472,24 @@
 @media (max-width: 413px) {
   /*the hero section*/
   .parallelogram {
-    width: 80%;
+    width: 62%;
     margin-top: 4%;
-    height: 80px;
+    height: 60px;
+    margin-bottom: 5.3rem;
   }
+  .parallelogram h1 {
+    font-size: 2rem;
+  }
+  .hero-content h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin-bottom: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.1;
+  }
+
   .bck-img {
     top: 69% !important;
     left: 0%;

@@ -173,13 +173,13 @@ span {
   flex-direction: column;
   justify-content: space-between;
   width: 30px;
-  height: 37px;
+  height: 40px;
   cursor: pointer;
 }
 
 .hamburger .bar {
-  height: 5px;
-  width: 100%;
+  height: 3px;
+  width: 80%;
   background-color: var(--nav-text);
   transition: all 0.3s ease;
 }
@@ -761,7 +761,8 @@ ol {
   .hamburger {
     display: flex;
     cursor: pointer;
-    width: 49px;
+    width: 40px;
+    height: 24px;
     z-index: 1250;
     /* Reset transforms that were causing overflow */
     transform: translateX(-52px);
@@ -814,6 +815,9 @@ ol {
   .parallelogram h1 {
     font-size: 4rem;
   }
+  .hero-content {
+    padding-right: 2.5rem;
+  }
   .hero-content h2 {
     font-size: 3rem;
     margin-top: -4rem;
@@ -826,13 +830,14 @@ ol {
   }
 
   .hero-btn {
-    font-size: 1.5rem;
+    font-size: 1rem;
     transition: all 0.3s ease;
     align-items: center;
     display: flex;
     justify-content: center;
     margin: 2.8rem auto 0 auto;
     width: fit-content;
+    padding: 0.9rem 1.5rem 0.9rem 1.5rem;
   }
 
   .bck-img {
