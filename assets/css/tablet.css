@@ -283,6 +283,51 @@
     transform: translateX(50px);
     margin-top: -180px;
   }
+
+  /*****************************The services page***************************/
+  /********************the hero section************************/
+  .ser-hero {
+    padding-top: 12rem;
+  }
+  .ser-hero-txt {
+    padding-bottom: 6rem;
+    padding-top: 5rem;
+  }
+
+  .ser-hero-txt h3 {
+    font-size: 1.3rem;
+  }
+  .ser-hero-txt h2 {
+    font-size: 2.6rem;
+  }
+  .ser-hero-txt p {
+    font-size: 1.3rem;
+  }
+
+  /********************The first section**************************/
+  .ser-first-txt h2 {
+    font-size: 2.6rem;
+  }
+  .ser-first-main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 3rem;
+  }
+
+  .ser-first-main .card img {
+    padding-left: 16rem;
+  }
+  .ser-first-main .card h3 {
+    text-align: center;
+    font-weight: 500;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+  }
+  .ser-first-main .card p {
+    text-align: center;
+    padding: 0 10rem;
+  }
 }
 
 @media (min-width: 500px) and (max-width: 542px) {
@@ -650,6 +695,44 @@
     padding-left: 2.5rem;
     padding-right: 5rem;
   }
+
+  /*****************************The services page***************************/
+  .ser-hero {
+    padding-top: 4rem;
+  }
+
+  .ser-hero-txt h3 {
+    font-size: 1.1rem;
+  }
+  .ser-hero-txt h2 {
+    font-size: 2rem;
+  }
+  .ser-hero-txt p {
+    font-size: 1rem;
+  }
+
+  /********************The first section**************************/
+  .ser-first-txt h2 {
+    font-size: 2rem;
+  }
+
+  .ser-first-main .card {
+    gap: 2rem;
+    padding-top: 3rem;
+  }
+  .ser-first-main .card img {
+    padding-left: 2.8rem;
+  }
+  .ser-first-main .card h3 {
+    text-align: center;
+    font-weight: 500;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+  }
+  .ser-first-main .card p {
+    text-align: center;
+    padding: 0 2rem;
+  }
 }
 @media (min-width: 359px) and (max-width: 361px) {
   /**** The hero section****/
@@ -679,6 +762,45 @@
     padding-left: 2rem;
     padding-right: 5rem;
   }
+
+  /*****************************The services page***************************/
+  /****************The hero section******************/
+  .ser-hero {
+    padding-top: 4rem;
+  }
+
+  .ser-hero-txt h3 {
+    font-size: 1.1rem;
+  }
+  .ser-hero-txt h2 {
+    font-size: 2rem;
+  }
+  .ser-hero-txt p {
+    font-size: 1rem;
+  }
+
+  /********************The first section**************************/
+  .ser-first-txt h2 {
+    font-size: 2rem;
+  }
+
+  .ser-first-main .card {
+    gap: 2rem;
+    padding-top: 3rem;
+  }
+  .ser-first-main .card img {
+    padding-left: 2.5rem;
+  }
+  .ser-first-main .card h3 {
+    text-align: center;
+    font-weight: 500;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+  }
+  .ser-first-main .card p {
+    text-align: center;
+    padding: 0 2rem;
+  }
 }
 
 @media (min-width: 343px) and (max-width: 345px) {
@@ -706,6 +828,47 @@
     padding-left: 1.4rem;
     padding-right: 5rem;
   }
+
+  /*****************************The services page***************************/
+  /****************The hero section******************/
+  .ser-hero {
+    padding-top: 7rem;
+  }
+
+  .ser-hero-txt h3 {
+    font-size: 1rem;
+  }
+  .ser-hero-txt h2 {
+    font-size: 1.8rem;
+  }
+  .ser-hero-txt p {
+    font-size: 1rem;
+  }
+
+  /********************The first section**************************/
+  .ser-first-txt h2 {
+    font-size: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .ser-first-main .card {
+    gap: 2rem;
+    padding-top: 3rem;
+  }
+  .ser-first-main .card img {
+    padding-left: 2rem;
+  }
+  .ser-first-main .card h3 {
+    text-align: center;
+    font-weight: 500;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+  }
+  .ser-first-main .card p {
+    text-align: center;
+    padding: 0 1rem;
+  }
 }
 
 @media (min-width: 500px) and (max-width: 542px) {
@@ -731,6 +894,47 @@
   .testimonials-grid {
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+
+  /*************************The services Page******************************/
+  /****************The hero section******************/
+  .ser-hero {
+    padding-top: 8rem;
+  }
+
+  .ser-hero-txt h3 {
+    font-size: 1.1rem;
+  }
+  .ser-hero-txt h2 {
+    font-size: 2rem;
+  }
+  .ser-hero-txt p {
+    font-size: 1rem;
+  }
+
+  /********************The first section**************************/
+  .ser-first-txt h2 {
+    font-size: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .ser-first-main .card {
+    gap: 2rem;
+    padding-top: 3rem;
+  }
+  .ser-first-main .card img {
+    padding-left: 8rem;
+  }
+  .ser-first-main .card h3 {
+    text-align: center;
+    font-weight: 500;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+  }
+  .ser-first-main .card p {
+    text-align: center;
+    padding: 0 5rem;
   }
 }
 
@@ -864,6 +1068,74 @@
     padding-left: 0rem;
     padding-bottom: 1rem;
   }
+
+  /*****************************The services page***************************/
+  /********************the hero section************************/
+  .ser-hero {
+    display: flex;
+    flex-direction: column;
+    padding-top: 13rem;
+    text-align: center;
+  }
+  .ser-hero-txt {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #ffffffe9;
+    padding-bottom: 8rem;
+    padding-top: 7rem;
+    border-radius: 2rem;
+  }
+
+  .ser-hero-txt h3 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--blk-text);
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+  }
+  .ser-hero-txt h2 {
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  .ser-hero-txt p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.3;
+    padding-bottom: 1rem;
+  }
+
+  /********************The first section**************************/
+  .ser-first-txt h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    padding: 1rem 1.5rem;
+  }
+  .ser-first-main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 3rem;
+  }
+
+  .ser-first-main .card {
+    gap: 2rem;
+    padding-top: 4rem;
+  }
+  .ser-first-main .card img {
+    padding-left: 23rem;
+  }
+  .ser-first-main .card h3 {
+    text-align: center;
+    font-weight: 500;
+    padding-top: 1rem;
+    font-size: 1.7rem;
+  }
+  .ser-first-main .card p {
+    text-align: center;
+    padding: 0 15rem;
+  }
 }
 @media (min-width: 1020px) and (max-width: 1024px) {
   .cards-container .card h3 {
@@ -886,6 +1158,74 @@
     gap: 2.5rem;
     padding-left: 0rem;
     padding-bottom: 1rem;
+  }
+
+  /*****************************The services page***************************/
+  /********************the hero section************************/
+  .ser-hero {
+    display: flex;
+    flex-direction: column;
+    padding-top: 0rem;
+    text-align: center;
+  }
+  .ser-hero-txt {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #ffffffe9;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    border-radius: 0rem;
+  }
+
+  .ser-hero-txt h3 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--blk-text);
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+  }
+  .ser-hero-txt h2 {
+    font-size: 2.8rem;
+    padding-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  .ser-hero-txt p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.3;
+    padding-bottom: 1rem;
+  }
+
+  /********************The first section**************************/
+  .ser-first-txt h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    padding: 1rem 1.5rem;
+  }
+  .ser-first-main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 3rem;
+  }
+
+  .ser-first-main .card {
+    gap: 2rem;
+    padding-top: 4rem;
+  }
+  .ser-first-main .card img {
+    padding-left: 23rem;
+  }
+  .ser-first-main .card h3 {
+    text-align: center;
+    font-weight: 500;
+    padding-top: 1rem;
+    font-size: 1.7rem;
+  }
+  .ser-first-main .card p {
+    text-align: center;
+    padding: 0 15rem;
   }
 }
 
@@ -935,6 +1275,32 @@
   .illustration img {
     display: none;
   }
+
+  /*******************************The services page***************************/
+  /********************The first section**************************/
+  .ser-first-txt h2 {
+    font-size: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .ser-first-main .card {
+    gap: 2rem;
+    padding-top: 3rem;
+  }
+  .ser-first-main .card img {
+    padding-left: 18rem;
+  }
+  .ser-first-main .card h3 {
+    text-align: center;
+    font-weight: 500;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+  }
+  .ser-first-main .card p {
+    text-align: center;
+    padding: 0 15rem;
+  }
 }
 @media (min-width: 800px) and (max-width: 839px) {
   .nav-links {
@@ -964,5 +1330,73 @@
     gap: 2.5rem;
     padding-left: 0rem;
     padding-bottom: 1rem;
+  }
+
+  /*****************************The services page***************************/
+  /********************the hero section************************/
+  .ser-hero {
+    display: flex;
+    flex-direction: column;
+    padding-top: 13rem;
+    text-align: center;
+  }
+  .ser-hero-txt {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #ffffffe9;
+    padding-bottom: 8rem;
+    padding-top: 7rem;
+    border-radius: 2rem;
+  }
+
+  .ser-hero-txt h3 {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--blk-text);
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+  }
+  .ser-hero-txt h2 {
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  .ser-hero-txt p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.3;
+    padding-bottom: 1rem;
+  }
+
+  /********************The first section**************************/
+  .ser-first-txt h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    padding: 1rem 1.5rem;
+  }
+  .ser-first-main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 3rem;
+  }
+
+  .ser-first-main .card {
+    gap: 2rem;
+    padding-top: 3rem;
+  }
+  .ser-first-main .card img {
+    padding-left: 18rem;
+  }
+  .ser-first-main .card h3 {
+    text-align: center;
+    font-weight: 500;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+  }
+  .ser-first-main .card p {
+    text-align: center;
+    padding: 0 15rem;
   }
 }
