@@ -166,6 +166,9 @@ span {
   background-color: var(--btn_blue);
   transform: translateY(-2px);
 }
+.btn-contact:active {
+  opacity: 0.6;
+}
 
 /* The hamburger */
 .hamburger {
@@ -253,6 +256,13 @@ span {
   justify-content: center;
   margin: 2.8rem auto 0 auto;
   width: fit-content; /* Ensure button only takes needed space */
+}
+
+.hero-btn:hover {
+  background-color: var(--btn_blue);
+}
+.hero-btn:active {
+  opacity: 0.5;
 }
 
 .hero-content p a {
@@ -437,6 +447,9 @@ ol {
 .btn:hover {
   background-color: #2563eb;
 }
+.btn:active {
+  opacity: 0.6;
+}
 
 .illustration {
   flex-shrink: 0;
@@ -545,7 +558,7 @@ ol {
 .testimonial-card:hover {
   transform: translateY(-5px);
   border-color: var(--lightblue);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
 }
 
 .testimonial-content {
