@@ -350,7 +350,87 @@ span {
   object-fit: contain;
 }
 
+/****************** Stats Section ******************/
 .stats-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: #e9eef4;
+  font-family: Arial, sans-serif;
+}
+
+.stats-header h2 {
+  font-size: 40px;
+  line-height: 1.3;
+  margin-bottom: 60px;
+  font-weight: 600;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.stat-box {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.stat-box:hover {
+  transform: scale(1.1);
+}
+
+.stat-number {
+  font-size: 57px;
+  font-weight: 700;
+  color: #294394;
+}
+
+.stat-label {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #294394;
+}
+
+.contact-btn {
+  padding: 0.8rem 1.8rem;
+  border-radius: 5rem;
+  border-style: none;
+  background-color: var(--black);
+  color: var(--btn-text);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  opacity: 0.7;
+}
+.contact-btn:active {
+  opacity: 0.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-header h1 {
+    font-size: 28px;
+  }
+
+  .stat-number {
+    font-size: 48px;
+  }
+
+  .stats-container {
+    gap: 50px;
+  }
+}
+
+/*.stats-section {
   background: #eef3f7;
   padding: 100px 20px;
   display: flex;
@@ -412,6 +492,7 @@ span {
 .stats-button:hover {
   opacity: 0.85;
 }
+*/
 
 /****************** Footer ****************/
 .footer {

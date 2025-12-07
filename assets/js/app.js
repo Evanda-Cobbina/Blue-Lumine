@@ -76,3 +76,44 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialize: ensure menu closed on load
   closeMobileMenu();
 });
+
+//For the services page
+
+// Count-up function
+function countUp(element, target) {
+    let current = 0;
+    let speed = Math.ceil(target / 20); // animation speed
+
+    const interval = setInterval(() => {
+        current += speed;
+        if (current >= target) {
+            current = target;
+            clearInterval(interval);
+        }
+        element.textContent = current + "+";
+    }, 30);
+}
+
+// Observe when section is visible
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            document.querySelectorAll('.stat-box').forEach(box => {
+                const numberElem = box.querySelector(".stat-number");
+                const target = parseInt(box.getAttribute("data-target"));
+                countUp(numberElem, target);
+            });
+        }
+    });
+}, { threshold: 0.4 });
+
+observer.observe(document.querySelector("#stats-section"));
+
+// Count-up again on hover
+document.querySelectorAll(".stat-box").forEach(box => {
+    box.addEventListener("mouseenter", () => {
+        const numberElem = box.querySelector(".stat-number");
+        const target = parseInt(box.getAttribute("data-target"));
+        countUp(numberElem, target);
+    });
+});
