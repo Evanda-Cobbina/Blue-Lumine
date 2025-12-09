@@ -223,11 +223,11 @@ span {
 }
 .ser-hero-txt h2 {
   font-size: 2.8rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   line-height: 1.2;
 }
 .ser-hero-txt p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.2;
 }
@@ -285,6 +285,7 @@ span {
   padding: 0 9rem;
 }
 
+/********************* The second section ********************/
 .ser-second {
   padding: 80px 20px;
   background: #f4f9ff;
@@ -705,16 +706,19 @@ span {
   }
 
   .ser-hero-txt h3 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 200;
     color: var(--blk-text);
-    padding-bottom: 1rem;
-    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-top: 1rem;
+    padding-left: 0rem;
+    text-align: center;
   }
   .ser-hero-txt h2 {
-    font-size: 2.2rem;
-    padding-bottom: 1.5rem;
+    font-size: 2.1rem;
+    padding-bottom: 1.2rem;
     line-height: 1.2;
+    font-weight: 500;
   }
   .ser-hero-txt p {
     font-size: 1.2rem;
@@ -728,6 +732,7 @@ span {
     text-align: center;
     padding-bottom: 2rem;
     font-size: 2.4rem;
+    font-weight: 500;
   }
   .ser-first-main {
     display: flex;
@@ -752,6 +757,28 @@ span {
   .ser-first-main .card p {
     text-align: center;
     padding: 0 2rem;
+  }
+
+  /********************* The second section ********************/
+  .ser-second-container {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 3rem;
+  }
+  .ser-second-text h2 {
+    padding-bottom: 2rem;
+    font-size: 2.4rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .ser-second-text p {
+    font-size: 1.15rem;
+  }
+
+  /****************** Stats Section ******************/
+  .stats-header h2 {
+    font-size: 37px;
+    font-weight: 500;
   }
 
   /************** The Footer Section *************/
