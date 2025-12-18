@@ -1185,8 +1185,12 @@
   .nav-links {
     margin-right: -3%;
   }
+  .act-links {
+    margin-left: 5.5rem;
+    color: var(--wht-text);
+  }
   .btn-contact {
-    margin-left: 1rem;
+    margin-left: -2rem;
   }
   .hamburger {
     width: 14%;
